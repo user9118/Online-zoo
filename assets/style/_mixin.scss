@@ -1,0 +1,45 @@
+@mixin btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  background: $color_accent;
+  text-transform: uppercase;
+  color: $color_secondory;
+  height: 54px;
+  width: 298px;
+}
+@mixin text{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+@mixin text_small {
+  font-weight: 400;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+}
+@mixin logo {
+  width: 82px;
+  height: 52px;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 120%;
+  border: 1px solid $color_secondory;
+  border-radius: 2px;
+  color: $color_secondory;
+  text-align: center;
+  background-image: url(/assets/icons/logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+@mixin btnInt {
+  &:hover {
+    background: $color_hover;
+  }
+  &:active {
+    background: $color_active;
+    transition: 400ms;
+  }
+}

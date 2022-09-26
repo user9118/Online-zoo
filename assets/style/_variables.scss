@@ -1,0 +1,100 @@
+//контейнеры
+$Container: 1160px;
+//цвета
+$color_dominant: black;
+$color_secondory: white;
+$color_accent: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+$color_active: green;
+$color_hover: #E47209;
+$color_misstrice: red;
+$c1: #FFEE2E;
+$dominant_gradient:  linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);;
+$secondory_gradient: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+
+//шрифты
+* {
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  font-weight: 700;
+  font-size: 114px;
+  line-height: 80%;
+}
+h2{
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+}
+h3{
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 130%;
+}
+h4{
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+}
+
+a{
+  &:link {
+    color: $color_secondory;
+  }
+  &:visited {
+    color: $color_secondory;
+  }
+  &:hover {
+    color: $color_hover;
+    transition: 400ms;
+  }
+  &:active {
+    color: $color_active;
+    transition: 400ms;
+  }
+}
+
+.logocontainer{
+  color: white;
+  width: 82px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 3px;
+  & a{
+    &:link {
+      color: white;
+    }
+    &:visited {
+      color: white;
+    }
+    &:hover {
+      color: white;
+    }
+    &:active {
+      color: white;
+    }
+    & .logo{
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 120%;
+      text-align: center;
+      & div {
+        position: relative;
+        &::before{
+          content: '';
+          position: absolute;
+          width: 10px;
+          height: 20px;
+          background: url('/assets/icons/bamboo.svg') no-repeat;
+          left: 6px;
+          top: -3px;
+          overflow: visible;
+        }
+      }
+    }
+  }
+}
