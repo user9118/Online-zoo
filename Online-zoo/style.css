@@ -57,13 +57,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400; }
 
 /*--------------------*/
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
-  -webkit-appearance: none;
-  margin: 0;
-  /* <-- Apparently some margin are still there even though it's hidden */ }
-
 * {
   font-family: 'Roboto', sans-serif; }
 
@@ -788,59 +781,27 @@ header {
   color: #333B41;
   margin-top: 20px; }
 
-.donate_info_infographics {
-  padding-top: 80px;
-  margin: 0 auto;
-  width: 532px;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+.donate_info_graphic {
+  margin-top: 60px;
+  background-color: #929699;
+  height: 400px; }
 
-.infographics_contaner {
-  margin-right: 10px;
-  text-align: center; }
+.donate_pagination {
+  width: 976px; }
 
-.infographics_day {
-  margin-top: 40px;
-  margin-bottom: 10px;
-  font-weight: 500;
-  font-size: 72px;
-  line-height: 80%; }
-
-.infographics_text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
-  color: #333B41; }
-
-.infographics_x {
-  margin-top: 40px;
-  background: url("/Online-zoo/assets/icons/x_icon.png") no-repeat;
-  background-position: center;
-  width: 14px;
-  height: 14px;
-  margin-right: 64px; }
-
-.infographics_svg {
-  width: 284px;
-  height: 246px;
-  background: url("/Online-zoo/assets/icons/panda_svg.svg") no-repeat;
-  background-position: center; }
-
-.input_money {
+.input_mone {
   width: 400px;
   margin: 0 auto;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center; }
-  .input_money form {
+  .input_mone form {
     display: flex;
     flex-direction: column;
     align-items: center; }
 
-.text {
-  position: relative;
+.donate_mone {
   width: 268px;
   height: 54px;
   background-color: rgba(0, 0, 0, 0);
@@ -848,29 +809,8 @@ header {
   border-radius: 2px;
   font-weight: 400;
   font-size: 16px;
-  line-height: 140%; }
-
-.pay_container {
-  width: 268px;
-  height: 54px;
-  border: 1px solid #929699;
-  border-radius: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%; }
-
-.pay_input {
-  padding-left: 10px;
-  height: 54px;
-  border: 0px;
-  width: 80%;
-  background-color: rgba(0, 0, 0, 0); }
-
-.dollar {
-  padding-right: 10px; }
+  line-height: 140%;
+  padding: 16px 0px 16px 9px; }
 
 .donate_format_pay {
   width: 268px;
@@ -880,9 +820,6 @@ header {
   .donate_format_pay label {
     display: flex;
     align-items: center; }
-
-.format_pay {
-  display: none; }
 
 .input_radio {
   display: inline-block;
@@ -902,7 +839,7 @@ header {
     height: 16px;
     background-color: green;
     border-radius: 50%;
-    opacity: 0;
+    opacity: 0.1;
     transition: 200ms; }
 
 .format_pay:checked + .input_radio::before {
