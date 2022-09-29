@@ -110,6 +110,8 @@ a:active {
   align-items: center;
   border: 1px solid white;
   border-radius: 3px; }
+  .logocontainer:hover {
+    border: 1px solid #E47209; }
   .logocontainer a:link {
     color: white; }
   .logocontainer a:visited {
@@ -655,35 +657,6 @@ footer {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-row-gap: 10px; }
-    .footer_nav .social ul li a {
-      display: flex;
-      align-items: center; }
-      .footer_nav .social ul li a div {
-        width: 26px;
-        height: 26px;
-        background-color: #767474;
-        border-radius: 50%;
-        margin-right: 12px;
-        background-repeat: no-repeat;
-        background-position: center; }
-      .footer_nav .social ul li a .facebook {
-        background-image: url("/Online-zoo/assets/icons/facebook.svg"); }
-      .footer_nav .social ul li a .twitter {
-        background-image: url("/Online-zoo/assets/icons/twitter.svg"); }
-      .footer_nav .social ul li a .instagram {
-        background-image: url("/Online-zoo/assets/icons/instagram.svg"); }
-      .footer_nav .social ul li a .youtube {
-        background-image: url("/Online-zoo/assets/icons/youtube.svg"); }
-      .footer_nav .social ul li a:link {
-        color: white; }
-      .footer_nav .social ul li a:visited {
-        color: white; }
-      .footer_nav .social ul li a:hover {
-        color: #E47209;
-        transition: 400ms; }
-      .footer_nav .social ul li a:active {
-        color: green;
-        transition: 400ms; }
   .footer_nav nav ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr; }
@@ -694,6 +667,29 @@ footer {
     font-size: 16px;
     line-height: 130%;
     color: white; }
+
+.social_link {
+  display: flex;
+  align-items: center; }
+  .social_link:hover {
+    color: #E47209; }
+    .social_link:hover .social_cyrcle {
+      background-color: #E47209; }
+  .social_link:active {
+    color: green; }
+    .social_link:active .social_cyrcle {
+      background-color: green; }
+  .social_link .social_cyrcle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 50%;
+    margin-right: 12px; }
+    .social_link .social_cyrcle svg {
+      fill: #FFFFFF; }
 
 header {
   background-color: black; }

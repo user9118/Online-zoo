@@ -509,47 +509,6 @@ footer {
       display: grid;
       grid-template-rows: 1fr 1fr 1fr 1fr;
       grid-row-gap: 10px;
-      & li {
-        & a{
-          display: flex;
-          align-items: center;
-          & div {
-            width: 26px;
-            height: 26px;
-            background-color: #767474;
-            border-radius: 50%;
-            margin-right: 12px;
-            background-repeat: no-repeat;
-            background-position: center;
-          }
-          & .facebook {
-            background-image: url('/Online-zoo/assets/icons/facebook.svg');
-          }
-          & .twitter {
-            background-image: url('/Online-zoo/assets/icons/twitter.svg');
-          }
-          & .instagram {
-            background-image: url('/Online-zoo/assets/icons/instagram.svg');
-          }
-          & .youtube {
-            background-image: url('/Online-zoo/assets/icons/youtube.svg');
-          }
-          &:link {
-            color: $color_secondory;
-          }
-          &:visited {
-            color: $color_secondory;
-          }
-          &:hover {
-            color: $color_hover;
-            transition: 400ms;
-          }
-          &:active {
-            color: $color_active;
-            transition: 400ms;
-          }
-        }
-      }
     }
   }
   & nav {
@@ -566,5 +525,36 @@ footer {
     font-size: 16px;
     line-height: 130%;
     color: white;
+  }
+}
+
+.social_link{
+  display: flex;
+  align-items: center;
+  &:hover {
+    color: $color_hover;
+    & .social_cyrcle {
+      background-color: $color_hover;
+
+    }
+  }
+  &:active{
+    color: $color_active;
+    & .social_cyrcle {
+      background-color: $color_active;
+    }
+  }
+  & .social_cyrcle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 50%;
+    margin-right: 12px;
+    & svg {
+      fill: #FFFFFF;
+    }
   }
 }
