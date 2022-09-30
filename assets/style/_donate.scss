@@ -156,6 +156,16 @@ header {
 }
 .dots_label{
   position: relative;
+  color: #333B41;
+  & svg {
+    fill: #929699;
+  }
+  &:hover {
+    color: #FE9013;
+    & svg {
+      fill: #FE9013;
+    }
+  }
 }
 .dot_radio{
   display: none;
@@ -197,7 +207,11 @@ header {
   align-items: center;
   position: absolute;
   transform: translate(0px, 20px);
-  margin-left: -10px;
+  margin-left: -30px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 140%;
+
 }
 .dot_radio:checked + .dot::before{
   opacity: 1;
@@ -216,7 +230,13 @@ header {
     align-items: center;
   }
 }
-
+.amount{
+  margin-top: 48px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  padding: 5px;
+}
 .pay_container{
   width: 268px;
   height: 54px;
