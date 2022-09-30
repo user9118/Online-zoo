@@ -245,7 +245,7 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  height: 700px;
+  height: 600px;
   padding-top: 140px; }
 
 .info_foto {
@@ -268,101 +268,96 @@ header {
 
 .animals {
   background: url("/Online-zoo/assets/images/strelitzia 1.png") right bottom no-repeat, url("/Online-zoo/assets/images/palm_foto.png") left bottom no-repeat;
-  overflow: visible;
-  margin: 0 auto;
-  margin-top: 100px; }
-  .animals .animals_container {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .animals .animals_container button {
-      width: 62px;
-      height: 62px;
-      border-radius: 50%;
-      background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-      margin: 20px;
-      justify-content: center;
-      align-items: center; }
-      .animals .animals_container button img {
-        width: 20px;
-        height: 20px; }
-      .animals .animals_container button:hover {
-        background: #E47209; }
-      .animals .animals_container button:active {
-        background: green;
-        transition: 400ms; }
+  margin-top: 106px; }
+
+.animals_animals_container {
+  width: 1322;
+  margin: 0 auto; }
 
 .animals_slider {
-  position: relative;
+  margin: 0 auto;
   display: grid;
-  width: 1160px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 30px;
   grid-row-gap: 20px; }
-  .animals_slider .card {
-    height: 426px;
-    border: 1px solid #E47209;
-    border-radius: 5px; }
-    .animals_slider .card .foto {
-      height: 366px;
-      overflow: hidden; }
-    .animals_slider .card .text_conteiner {
-      padding: 8px 12px 13px 16px;
-      display: flex;
-      justify-content: space-between; }
-      .animals_slider .card .text_conteiner .text {
-        position: relative;
-        display: flex;
-        flex-direction: column; }
-        .animals_slider .card .text_conteiner .text .name {
-          font-family: 'Roboto';
-          font-style: normal;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 140%;
-          text-transform: uppercase;
-          color: #000000; }
-        .animals_slider .card .text_conteiner .text .location {
-          font-weight: 400;
-          font-weight: 300;
-          font-size: 15px;
-          line-height: 120%; }
-    .animals_slider .card .icon {
-      background-repeat: no-repeat;
-      width: 48px;
-      height: 38px;
-      background-position: center; }
-    .animals_slider .card .icon1 {
-      background-image: url("/Online-zoo/assets/icons/banana-bamboo_icon.svg"); }
-    .animals_slider .card .icon2 {
-      background-image: url("/Online-zoo/assets/icons/meet-fish_icon.svg"); }
-    .animals_slider .card .icon3 {
-      background-image: url("/Online-zoo/assets/icons/banana-bamboo_icon.svg"); }
-    .animals_slider .card .icon4 {
-      background-image: url("/Online-zoo/assets/icons/banana-bamboo_icon.svg"); }
-    .animals_slider .card .icon5 {
-      background-image: url("/Online-zoo/assets/icons/meet-fish_icon.svg"); }
-    .animals_slider .card .icon6 {
-      background-image: url("/Online-zoo/assets/icons/meet-fish_icon.svg"); }
 
-.foto1 {
+.animals_slider {
+  width: 1160px; }
+
+.animals_card {
+  height: 426px;
+  border: 1px solid #E47209;
+  border-radius: 5px;
+  overflow: hidden; }
+  .animals_card .foto {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 366px; }
+    .animals_card .foto::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0; }
+  .animals_card:hover {
+    transition: all 0.4s ease;
+    transform: scale(1.1);
+    border: none; }
+    .animals_card:hover .foto::before {
+      opacity: 1; }
+    .animals_card:hover .animals_text_conteiner {
+      transition: all 0.4s ease;
+      transform: translateY(-60px);
+      color: white; }
+
+.animals_foto1 {
   background-image: url("/Online-zoo/assets/images/Rectangle 1.png"); }
 
-.foto2 {
+.animals_foto2 {
   background-image: url("/Online-zoo/assets/images/Rectangle 2.png"); }
 
-.foto3 {
+.animals_foto3 {
   background-image: url("/Online-zoo/assets/images/Rectangle 3.png"); }
 
-.foto4 {
+.animals_foto4 {
   background-image: url("/Online-zoo/assets/images/Rectangle 4.png"); }
 
-.foto5 {
+.animals_foto5 {
   background-image: url("/Online-zoo/assets/images/Rectangle 5.png"); }
 
-.foto6 {
+.animals_foto6 {
   background-image: url("/Online-zoo/assets/images/Rectangle 6.png"); }
+
+.animals_text_conteiner {
+  padding: 8px 12px 13px 16px;
+  display: flex;
+  justify-content: space-between; }
+  .animals_text_conteiner .animals_text .animals_name {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase; }
+  .animals_text_conteiner .animals_text .animals_location {
+    font-weight: 400;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%; }
+  .animals_text_conteiner .icon {
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 38px;
+    background-position: center; }
+  .animals_text_conteiner .icon1 {
+    background-image: url("/Online-zoo/assets/icons/banana-bamboo_icon.svg"); }
+  .animals_text_conteiner .icon2 {
+    background-image: url("/Online-zoo/assets/icons/meet-fish_icon.svg"); }
 
 .wraper {
   position: relative;
@@ -505,7 +500,6 @@ header {
   margin: 0 auto;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
   align-items: center;
   margin-top: 47px;
   overflow-x: auto; }
@@ -520,45 +514,58 @@ header {
     background: black;
     border: 4px solid transparent;
     background-clip: content-box; }
-  .reviews_sliader .card {
-    flex: 0 0 auto;
-    max-width: 267px;
-    margin: 10px;
-    padding: 16px;
+
+.reviews_card {
+  flex: 0 0 auto;
+  width: 268px;
+  height: 391px;
+  margin: 10px;
+  padding: 16px;
+  position: relative;
+  background: #F1F3F2;
+  border-radius: 20px; }
+  .reviews_card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     border-radius: 20px;
-    border: 2px solid rgba(243, 169, 248, 0.66);
-    transform: translate(560px, 0); }
-    .reviews_sliader .card .title {
-      display: flex; }
-      .reviews_sliader .card .title .icon {
-        width: 37px;
-        height: 37px;
-        background-repeat: no-repeat; }
-      .reviews_sliader .card .title .icon1 {
-        background-image: url("/Online-zoo/assets/icons/user_icon.svg"); }
-      .reviews_sliader .card .title .icon2 {
-        background-image: url("/Online-zoo/assets/images/Ellipse 2.png"); }
-      .reviews_sliader .card .title .icon3 {
-        background-image: url("/Online-zoo/assets/images/Ellipse 3.png"); }
-      .reviews_sliader .card .title .icon4 {
-        background-image: url("/Online-zoo/assets/images/Ellipse 4.png"); }
-      .reviews_sliader .card .title .name {
-        margin-left: 10px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 140%; }
-        .reviews_sliader .card .title .name .location {
-          font-weight: 300;
-          font-size: 15px;
-          line-height: 120%;
-          color: #BDBDBD; }
-    .reviews_sliader .card .text {
-      margin-top: 11px;
-      font-weight: 400;
-      font-weight: 300;
-      font-size: 15px;
-      line-height: 120%;
-      color: #767474; }
+    z-index: -1; }
+
+.reviews_card_title {
+  display: flex; }
+  .reviews_card_title .icon {
+    width: 37px;
+    height: 37px;
+    background-repeat: no-repeat; }
+  .reviews_card_title .icon1 {
+    background-image: url("/Online-zoo/assets/icons/user_icon.svg"); }
+  .reviews_card_title .icon2 {
+    background-image: url("/Online-zoo/assets/images/Ellipse 2.png"); }
+  .reviews_card_title .icon3 {
+    background-image: url("/Online-zoo/assets/images/Ellipse 3.png"); }
+  .reviews_card_title .icon4 {
+    background-image: url("/Online-zoo/assets/images/Ellipse 4.png"); }
+
+.reviews_card_title {
+  display: flex; }
+
+.reviews_card_name {
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%; }
+
+.reviews_card_text {
+  font-weight: 400;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+  margin-top: 11px;
+  color: #767474; }
 
 .reviews_button {
   font-weight: 500;
@@ -918,3 +925,8 @@ header {
   width: 298px;
   border-radius: 25px;
   margin-top: 30px; }
+  .btn_feed:hover {
+    background: #E47209; }
+  .btn_feed:active {
+    background: green;
+    transition: 400ms; }

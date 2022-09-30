@@ -94,7 +94,7 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  height: 700px;
+  height: 600px;
   padding-top: 140px;
 }
 .info_foto {
@@ -117,115 +117,114 @@ header {
   }
 }
 
+
 .animals {
   background: url('/Online-zoo/assets/images/strelitzia\ 1.png') right bottom no-repeat, 
               url('/Online-zoo/assets/images/palm_foto.png') left bottom no-repeat;
-  overflow: visible;
-  margin: 0 auto;
-  margin-top: 100px;
-  & .animals_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    & button {
-      width: 62px;
-      height: 62px;
-      border-radius: 50%;
-      background: $color_accent;
-      margin: 20px;
-      justify-content: center;
-      align-items: center;
-      & img {
-        width: 20px;
-        height: 20px;
-      }
-      @include btnInt;
-    }
-  }
+  margin-top: 106px;
 }
-
+.animals_animals_container{
+  width: 1322;
+  margin: 0 auto;
+}
 .animals_slider{
-  position: relative;
+  margin: 0 auto;
   display: grid;
-  width: 1160px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 30px;
   grid-row-gap: 20px;
-  & .card {
-    height: 426px;
-    border: 1px solid $color_hover;
-    border-radius: 5px;
-    & .foto {
-      height: 366px;
-      overflow: hidden;
+}
+.animals_slider{
+  width: 1160px;
+}
+.animals_card {
+  height: 426px;
+  border: 1px solid $color_hover;
+  border-radius: 5px;
+  overflow: hidden;
+  & .foto {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 366px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($color: #000000, $alpha: 0.5);
+      opacity: 0;
     }
-    & .text_conteiner{
-      padding: 8px 12px 13px 16px;
-      display: flex;
-      justify-content: space-between;
-      & .text {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        & .name {
-          font-family: 'Roboto';
-          font-style: normal;
-          font-weight: 500;
-          font-size: 16px;
-          line-height: 140%;
-          text-transform: uppercase;
-          color: #000000;
-        }
-        & .location {
-          @include text_small;
-        }
+  }
+  &:hover {
+    transition: all 0.4s ease;
+    transform: scale(1.1);
+    border: none;
+    & .foto {
+      &::before {
+        opacity: 1;
       }
     }
-    & .icon {
-      background-repeat: no-repeat;
-      width: 48px;
-      height: 38px;
-      background-position: center;
-    }
-    & .icon1 {
-      background-image: url('/Online-zoo/assets/icons/banana-bamboo_icon.svg');
-    }
-    & .icon2 {
-      background-image: url('/Online-zoo/assets/icons/meet-fish_icon.svg');
-    }
-    & .icon3 {
-      background-image: url('/Online-zoo/assets/icons/banana-bamboo_icon.svg');
-    }
-    & .icon4 {
-      background-image: url('/Online-zoo/assets/icons/banana-bamboo_icon.svg');
-    }
-    & .icon5 {
-      background-image: url('/Online-zoo/assets/icons/meet-fish_icon.svg');
-    }
-    & .icon6 {
-      background-image: url('/Online-zoo/assets/icons/meet-fish_icon.svg');
+    & .animals_text_conteiner{
+      transition: all 0.4s ease;
+      transform: translateY(-60px);
+      color: white;
     }
   }
 }
 
-.foto1 {
+.animals_foto1 {
   background-image: url('/Online-zoo/assets/images/Rectangle\ 1.png');
 }
-.foto2 {
+.animals_foto2 {
   background-image: url('/Online-zoo/assets/images/Rectangle\ 2.png');
 }
-.foto3 {
+.animals_foto3 {
   background-image: url('/Online-zoo/assets/images/Rectangle\ 3.png');
 }
-.foto4 {
+.animals_foto4 {
   background-image: url('/Online-zoo/assets/images/Rectangle\ 4.png');
 }
-.foto5 {
+.animals_foto5 {
   background-image: url('/Online-zoo/assets/images/Rectangle\ 5.png');
 }
-.foto6 {
+.animals_foto6 {
   background-image: url('/Online-zoo/assets/images/Rectangle\ 6.png');
+}
+
+.animals_text_conteiner{
+  padding: 8px 12px 13px 16px;
+  display: flex;
+  justify-content: space-between;
+    & .animals_text {
+      & .animals_name {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        text-transform: uppercase;
+
+      }
+      & .animals_location {
+        @include text_small;
+      }
+    }
+  & .icon {
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 38px;
+    background-position: center;
+  }
+  & .icon1 {
+    background-image: url('/Online-zoo/assets/icons/banana-bamboo_icon.svg');
+  }
+  & .icon2 {
+    background-image: url('/Online-zoo/assets/icons/meet-fish_icon.svg');
+  }
 }
 
 .wraper {
@@ -245,6 +244,7 @@ header {
     margin-bottom: 100px;
   }
 }
+
 .feed {
   background: $dominant_gradient;
   padding-top: 70px;
@@ -358,7 +358,6 @@ header {
   margin: 0 auto;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
   align-items: center;
   //display: grid;
   //grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -373,59 +372,65 @@ header {
   &::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background-color: #FE9013;
-}
-  &::-webkit-scrollbar-track {
-    background: rgb(0,0,0);
-    border: 4px solid transparent;
-    background-clip: content-box;
-}
-  &::-webkit-resizer {
-
   }
-  & .card {
-    flex: 0 0 auto;
-    max-width: 267px;
-    margin: 10px;
-    padding: 16px;
+    &::-webkit-scrollbar-track {
+      background: rgb(0,0,0);
+      border: 4px solid transparent;
+      background-clip: content-box;
+  }
+}
+.reviews_card {
+  flex: 0 0 auto;
+  width: 268px;
+  height: 391px;
+  margin: 10px;
+  padding: 16px;
+  position: relative;
+  background: #F1F3F2;
+  border-radius: 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
     border-radius: 20px;
-    border: 2px solid rgba(243, 169, 248, 0.66);
-    transform: translate(560px,0);
-    & .title {
-      display: flex;
-      & .icon {
-        width: 37px;
-        height: 37px;
-        background-repeat: no-repeat;
-      }
-      & .icon1 {
-        background-image: url('/Online-zoo/assets/icons/user_icon.svg');
-      }
-      & .icon2 {
-        background-image: url('/Online-zoo/assets/images/Ellipse\ 2.png');
-      }
-      & .icon3 {
-        background-image: url('/Online-zoo/assets/images/Ellipse\ 3.png');
-      }
-      & .icon4 {
-        background-image: url('/Online-zoo/assets/images/Ellipse\ 4.png');
-      }
-      & .name {
-        margin-left: 10px;
-        @include text;
-        & .location {
-          font-weight: 300;
-          font-size: 15px;
-          line-height: 120%;
-          color: #BDBDBD;
-        }
-      }
-    }
-    & .text {
-      margin-top: 11px;
-      @include text_small;
-      color: #767474;
-    }
+    z-index: -1;
   }
+}
+.reviews_card_title {
+  display: flex;
+  & .icon {
+    width: 37px;
+    height: 37px;
+    background-repeat: no-repeat;
+  }
+  & .icon1 {
+    background-image: url('/Online-zoo/assets/icons/user_icon.svg');
+  }
+  & .icon2 {
+    background-image: url('/Online-zoo/assets/images/Ellipse\ 2.png');
+  }
+  & .icon3 {
+    background-image: url('/Online-zoo/assets/images/Ellipse\ 3.png');
+  }
+  & .icon4 {
+    background-image: url('/Online-zoo/assets/images/Ellipse\ 4.png');
+  }
+}
+.reviews_card_title{
+  display: flex;
+}
+.reviews_card_name{
+  margin-left: 10px;
+  @include text;
+}
+.reviews_card_text{
+  @include text_small;
+  margin-top: 11px;
+  color: #767474;
 }
 .reviews_button {
   @include  btn;

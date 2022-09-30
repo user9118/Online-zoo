@@ -225,4 +225,5 @@ header {
   @include btn;
   border-radius: 25px;
   margin-top: 30px;
+  @include btnInt;
 }
