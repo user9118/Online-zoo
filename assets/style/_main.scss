@@ -123,12 +123,24 @@ header {
               url('/Online-zoo/assets/images/palm_foto.png') left bottom no-repeat;
   margin-top: 106px;
 }
-.animals_animals_container{
-  width: 1322;
-  margin: 0 auto;
+.animals_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & button {
+    @include btn;
+    width: 62px;
+    height: 62px;
+    background-color: orange;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include btnInt
+  }
 }
 .animals_slider{
-  margin: 0 auto;
+  margin: 0 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
