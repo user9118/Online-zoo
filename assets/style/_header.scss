@@ -1,0 +1,54 @@
+header {
+  background-color: black;
+  z-index: 1;
+  position: relative;
+}
+
+.header_container{
+  margin: 0 auto;
+  height: 80px;
+  display: flex;
+  color: white;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  align-items: center;
+}
+
+@media (max-width:999px) {
+  .header_container{
+    height: 40px;
+  }
+}
+
+.logo_head{
+  margin-right: 63px;
+}
+
+.header_nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  & ul {
+    display: flex;
+    align-items: center;
+    & li {
+      padding-right: 58px;
+      &.open {
+        color: #FE9013;
+      }
+    }
+  } 
+} 
+
+.header_autor{
+  justify-self: end;
+  width: 120px;
+}
+
+@media (max-width:999px) {
+  .header_nav{
+    display: none;
+  }
+}

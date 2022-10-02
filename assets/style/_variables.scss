@@ -1,5 +1,4 @@
-//контейнеры
-$Container: 1160px;
+
 //цвета
 $color_dominant: black;
 $color_secondory: white;
@@ -15,10 +14,20 @@ $secondory_gradient: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%
 * {
   font-family: 'Roboto', sans-serif;
 }
-h1 {
+.watch {
   font-weight: 700;
-  font-size: 114px;
-  line-height: 80%;
+  font-size: 107px;
+  line-height: 75%;
+}
+@media (max-width:1399px) {
+  .watch{
+    font-size: 85px;
+  }
+}
+@media (max-width:999px) {
+  .watch{
+    font-size: 54px;
+  }
 }
 h2{
   font-weight: 400;
@@ -53,6 +62,69 @@ a{
   }
 }
 
+@mixin btn {
+  background: $color_accent;
+  height: 54px;
+  width: 298px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: $color_secondory;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin btn_text {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+@mixin text{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+}
+@mixin text_small {
+  font-weight: 400;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+}
+
+@mixin btnInt {
+  &:hover {
+    background: $color_hover;
+  }
+  &:active {
+    background: $color_active;
+    transition: 400ms;
+  }
+}
+
+//контейнеры
+
+.container{
+  max-width: 72.5vw;
+}
+
+@media (max-width:1439px) {
+  .container{
+    max-width: 94vw;
+  }
+}
+
+@media (max-width:999px) {
+  .container{
+    max-width: 94vw;
+  }
+}
+
+//logotip
+
+
 .logocontainer{
   color: white;
   width: 82px;
@@ -62,6 +134,7 @@ a{
   align-items: center;
   border: 1px solid white;
   border-radius: 3px;
+  padding: 5px;
   &:hover {
     border: 1px solid $color_hover;
   }
@@ -81,23 +154,84 @@ a{
     & .logo{
       font-family: 'Roboto';
       font-style: normal;
-      font-weight: 400;
-      font-size: 19px;
-      line-height: 120%;
       text-align: center;
       & div {
         position: relative;
         &::before{
           content: '';
           position: absolute;
-          width: 10px;
-          height: 20px;
+          width: 21px;
+          height: 21px;
           background: url('/Online-zoo/assets/icons/bamboo.svg') no-repeat;
-          left: 6px;
-          top: -3px;
+          left: 3px;
+          top: -5px;
           overflow: visible;
         }
       }
     }
   }
 }
+
+@media (max-width:999px) {
+  .logocontainer{
+    transform: scale(90%);
+    border: none;
+  }
+}
+
+.logocontainer_footer{
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 120%;
+  color: white;
+  width: 82px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 5px;
+  &:hover {
+    border: 1px solid $color_hover;
+  }
+  & a{
+    &:link {
+      color: white;
+    }
+    &:visited {
+      color: white;
+    }
+    &:hover {
+      color: white;
+    }
+    &:active {
+      color: white;
+    }
+    & .logo{
+      font-family: 'Roboto';
+      font-style: normal;
+      text-align: center;
+      & div {
+        position: relative;
+        &::before{
+          content: '';
+          position: absolute;
+          width: 21px;
+          height: 21px;
+          background: url('/Online-zoo/assets/icons/bamboo.svg') no-repeat;
+          left: 3px;
+          top: -4px;
+          overflow: visible;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:999px) {
+  .logocontainer_footer{
+    transform: scale(90%);
+  }
+}
+

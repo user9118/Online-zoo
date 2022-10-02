@@ -1,0 +1,169 @@
+
+.reviews {
+  background-image: url('/Online-zoo/assets/images/leav_foto.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  overflow: visible;
+  z-index: -2;
+}
+
+.reviews_container{
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 140px;
+}
+
+.reviews_title{
+  text-align: center;
+}
+
+.reviews_sliader {
+  padding-top: 30px;
+  height: 450;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    height: 8px;
+    border-radius: 5px;
+    border: 1px solid #FE9013;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #FE9013;
+  }
+    &::-webkit-scrollbar-track {
+      background: rgb(0,0,0);
+      border: 4px solid transparent;
+      background-clip: content-box;
+  }
+}
+
+.reviews_card {
+  flex: 0 0 auto;
+  width: 266px;
+  height: 391px;
+  margin: 10px 24px 20px 5px;
+  padding: 16px;
+  position: relative;
+  background: #F1F3F2;
+  border-radius: 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+    border-radius: 20px;
+    z-index: -1;
+  }
+}
+
+
+.reviews_card_title {
+  display: flex;
+  & .icon {
+    width: 37px;
+    height: 37px;
+    background-repeat: no-repeat;
+  }
+  & .icon1 {
+    background-image: url('/Online-zoo/assets/icons/user_icon.svg');
+  }
+  & .icon2 {
+    background-image: url('/Online-zoo/assets/images/Ellipse\ 2.png');
+  }
+  & .icon3 {
+    background-image: url('/Online-zoo/assets/images/Ellipse\ 3.png');
+  }
+  & .icon4 {
+    background-image: url('/Online-zoo/assets/images/Ellipse\ 4.png');
+  }
+}
+
+.reviews_card_name{
+  margin-left: 10px;
+  @include text;
+}
+
+.reviews_card_text{
+  @include text_small;
+  margin-top: 11px;
+  color: #767474;
+}
+
+.reviews_button {
+  @include  btn;
+  border-radius: 5px;
+  margin-top: 31px;
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include btnInt;
+}
+
+@media (max-width:1440px) {
+  .reviews_container{
+    padding-top: 100px;
+  }
+  .reviews_button{
+    margin-top: 52px;
+    margin-bottom: 140px;
+  }
+  .reviews_card{
+    margin: 10px 20px 20px 5px;
+    width: 293px;
+    height: 391px;
+  }
+}
+
+@media (max-width:999px) {
+  .reviews{
+    background-size: 10vh;
+  }
+  .reviews_container {
+    padding-top: 60px;
+  }
+  .reviews_title {
+  }
+  .reviews_sliader {
+    display: block;
+    overflow: hidden;
+    height: 390px;
+  }
+  .reviews_card {
+    flex: 0 0 auto;
+    width: 99%;
+    height: 108px;
+    margin: 3px 2px 15px 4px;
+    padding: 13px 15px 1px 15px;
+    position: relative;
+    background: #F1F3F2;
+    border-radius: 20px;
+  }
+  .reviews_card_wraper{
+    height: 100%;
+    overflow: hidden;
+  }
+  .reviews_card_title {
+  }
+  .icon {
+  }
+  .icon1 {
+  }
+  .reviews_card_name {
+  }
+  .reviews_card_location {
+  }
+  .reviews_card_text {
+  }
+  .reviews_button{
+    right: 50%;
+    margin: 40px auto 80px;
+  }
+}

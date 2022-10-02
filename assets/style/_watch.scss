@@ -1,0 +1,94 @@
+.watch {
+  background-image: url('/Online-zoo/assets/images/Giant\ Panda.png');
+  background-position: -50px -120px;
+  background-size: 110%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.watch_content {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  text-transform: uppercase;
+}
+
+.watch_text {
+  padding: 0px;
+  z-index: 1;
+  margin-top: 86px;
+  width: 500px;
+  color: $color_secondory;
+  text-align: center;
+    & span {
+      color: $c1;
+    }   
+}
+
+.watch_circle {
+  z-index: 0;
+  position: absolute;
+  width: 465px;
+  height: 465px;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  border-radius: 50%;
+  margin-top: 12px;
+  transform: translate(-110px,0)
+}
+
+.watch_btn {
+  @include btn;
+  border-radius: 25px;
+  margin-top: 60px;
+  @include btnInt;
+  margin-bottom: 100px;
+}
+
+@media (max-width:1439px) {
+  .watch{
+    background-size: cover;
+    background-position: center;
+  }
+  .watch_content{
+    & .watch_text {
+      margin-right: 85px;
+      margin-top: 43px;
+    }
+    & .watch_circle {
+      width: 367px;
+      height: 367px;
+      transform: translate(-150px, -25px)
+    }
+    & .watch_btn {
+      margin-top: 40px;
+      margin-bottom: 47px;
+    }
+  }
+}
+
+@media (max-width:999px) {
+  .watch{
+    font-size: 54px;
+    .watch_content{
+      & .watch_text {
+        margin-right: 0px;
+        margin-top: 43px;
+        width: 250px;
+        margin-bottom: 86px;
+      }
+      & .watch_circle {
+        width: 237.6px;
+        height: 237.6px;
+        transform: translate(-50px, 0px)
+      }
+      & .watch_btn {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        position: absolute;
+        left: 4vw;
+      }
+    }
+  }
+}

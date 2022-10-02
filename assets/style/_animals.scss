@@ -1,0 +1,186 @@
+.animals {
+  background: url('/Online-zoo/assets/images/strelitzia\ 1.png') right bottom no-repeat, 
+              url('/Online-zoo/assets/images/palm_foto.png') left bottom no-repeat;
+}
+@media (max-width:1439px) {
+  .animals{
+    background-size: 30vh;
+  }
+}
+.animals_container{
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.animals_slider_row1{
+  max-width: 1180px;
+  overflow: hidden;
+  display: flex;
+  padding-top: 10px;
+}
+.animals_slider_row1::-webkit-scrollbar{
+  display: none;
+}
+
+.animals_card {
+  flex: 1 0 auto;
+  border: 1px solid orange;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 15px;
+  &:hover {
+    overflow: visible;
+    border: none;
+    transition: all 0.4s ease;
+    transform: scale(1.05);
+    border-radius: 10px;
+    & .animals_card_foto {
+      overflow: visible;
+      border-radius: 10px;
+      &::before {
+        overflow: visible;
+        border-radius: 10px;
+        opacity: 1;
+      }
+    }
+    & .animals_card_text{
+      transition: all 0.4s ease;
+      transform: translateY(-60px);
+      color: white;
+    }
+  }
+}
+
+.animals_card_foto{
+  background: url('/Online-zoo/assets/images/Rectangle\ 1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 366px;
+  height: 366px;
+  position: relative;
+  border-radius: 10px;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: 0.5);
+    opacity: 0;
+    border-radius: 10px;
+  }
+}
+
+.animals_card_text{
+  padding: 8px 12px 14px 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.animals_card_name{
+  @include btn_text;
+}
+.animals_card_location{
+ @include text_small;
+}
+.animals_card_icon{
+  width: 40px;
+  height: 40px;
+  background: url('/Online-zoo/assets/icons/banana-bamboo_icon.svg') no-repeat;
+}
+.animals_btns{
+  position: absolute;
+  top: 38%;
+  max-width: 1300px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.animals_slider_btn{
+  @include btn;
+  @include btnInt;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.row2{
+  margin-top: 20px
+}
+
+@media (max-width:1439px) {
+  .animals_btns{
+    position: static;
+    justify-content: center;
+    padding: 15px 0;
+    max-width: 80vw;
+  }
+
+  .animals_card_foto{
+    width: 294px;
+    height: 294px;
+  }
+  .row2{
+    margin-top: 0px
+  }
+  .animals_slider_btn{
+    margin: 0 85px;
+  }
+  .animals_container{
+    position: relative;
+  }
+  .animals_slider_row1{
+    max-width: 970px;
+  }
+}
+
+@media (max-width:999px) {
+  .animals{
+    background-size: 18vh;
+  }
+  .animals_btns{
+    justify-content: center;
+    padding: 15px 0;
+    max-width: 80vw;
+    margin-left: 10px;
+  }
+  .row2{
+  }
+  .animals_slider_btn{
+    margin: 0 15px;
+  }
+  .animals_container{
+
+  }
+  .animals_slider_row1{
+    max-width: 640px;
+  }
+}
+
+.btn_choose {
+  @include btn;
+  @include btnInt;
+  @include btn_text;
+  height: 54px;
+  width: 298px;
+  border-radius: 25px;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+@media (max-width:1439px) {
+  .btn_choose{
+    margin-top: 80px;
+    margin-bottom: 140px;
+  }
+}

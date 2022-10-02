@@ -1,0 +1,97 @@
+
+.info{
+  background-image: url('/Online-zoo/assets/images/flower_foto1.png');
+  background-repeat: no-repeat;
+  background-position: 102% center;
+  background-size: 25vh;
+  overflow: visible;
+  color: #333B41;
+}
+@media (max-width:1439px) {
+  .info{
+    background: none;
+  }
+}
+
+.info_Container{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 160px;
+  padding-top: 120px;
+}
+
+.info_foto {
+  flex: 0 1 52%;
+  height: 408px;
+  background-image: url('/Online-zoo/assets/images/bamboo-cap.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.info_text_wraper {
+  flex: 0 1 47%;
+  padding-left: 87px;
+}
+
+.info_text {
+  margin-top: 20px;
+  @include text;
+}
+.info_subtitle {
+  margin-top: 54px;
+}
+.info_small_text {
+  margin-top: 20px;
+  @include text;
+}
+
+@media (max-width:1439px) {
+  .info_Container{
+    padding-top: 100px;
+    padding-bottom: 140px;
+  }
+  .info_foto{
+    flex: 0 1 45%;
+  }
+}
+@media (max-width:1439px) {
+  .info_text_wraper{
+    flex: 0 1 50%;
+    padding-left: 0px;
+    padding-right: 100px;
+  }
+}
+@media (max-width:1180px) {
+  .info_text_wraper{
+    flex: 0 1 50%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media (max-width:999px) {
+  .info{
+    background-image: url('/Online-zoo/assets/images/flower_foto1.png');
+    background-repeat: no-repeat;
+    background-position: 104% center;
+    background-size: 18vh;
+  }
+  .info_Container{
+    padding-bottom: 80px;
+    padding-top: 60px;
+  }
+  .info_subtitle{
+    margin-top: 30px;
+  }
+  .info_foto{
+    display: none;
+  }
+  .info_text_wraper{
+    flex: 0 1 80%;
+  }
+  .info_text{
+    margin-top: 20px;
+  }
+}

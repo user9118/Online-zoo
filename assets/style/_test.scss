@@ -1,0 +1,174 @@
+
+.animals {
+  background: url('/Online-zoo/assets/images/strelitzia\ 1.png') right bottom no-repeat, 
+              url('/Online-zoo/assets/images/palm_foto.png') left bottom no-repeat;
+  background-size: 32vh;
+}
+@media (max-width:1439px) {
+  .animals{
+    background-size: 22vh;
+  }
+}
+
+.animals_container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & button {
+
+    width: 62px;
+    height: 62px;
+    background-color: orange;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+}
+
+.animals_slider{
+  display: grid;
+  width: 100%;
+  margin: 0 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+}
+@media (max-width:1439px) {
+  .animals_container{
+    display: block;
+    & button{
+      position: absolute;
+      top: 46.5%;
+    }
+    & .btn_left{
+      left: 40%;
+    }
+    & .btn_right{
+      left: 60%;
+    }
+  }
+  .animals_slider{
+    grid-row-gap: 92px;
+  }
+}
+@media (max-width:1439px) {
+  .animals_slider{
+    overflow-x: scroll;
+  }
+}
+.animals_card {
+  flex: 0 1 33.333%;
+  height: 426px;
+  border-radius: 5px;
+  overflow: hidden;
+  & .foto {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 366px;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($color: #000000, $alpha: 0.5);
+      opacity: 0;
+    }
+  }
+  &:hover {
+    transition: all 0.4s ease;
+    transform: scale(1.1);
+    border: none;
+    & .foto {
+      &::before {
+        opacity: 1;
+      }
+    }
+    & .animals_card_text{
+      transition: all 0.4s ease;
+      transform: translateY(-60px);
+      color: white;
+    }
+  }
+}
+
+.animals_foto1 {
+  background-image: url('/Online-zoo/assets/images/Rectangle\ 1.png');
+}
+.animals_foto2 {
+  background-image: url('/Online-zoo/assets/images/Rectangle\ 2.png');
+}
+.animals_foto3 {
+  background-image: url('/Online-zoo/assets/images/Rectangle\ 3.png');
+}
+.animals_foto4 {
+  background-image: url('/Online-zoo/assets/images/Rectangle\ 4.png');
+}
+.animals_foto5 {
+  background-image: url('/Online-zoo/assets/images/Rectangle\ 5.png');
+}
+.animals_foto6 {
+  background-image: url('/Online-zoo/assets/images/Rectangle\ 6.png');
+}
+
+.animals_text_conteiner{
+  padding: 8px 12px 13px 16px;
+  display: flex;
+  justify-content: space-between;
+    & .animals_text {
+      & .animals_name {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        text-transform: uppercase;
+
+      }
+      & .animals_location {
+
+      }
+    }
+  & .icon {
+    background-repeat: no-repeat;
+    width: 48px;
+    height: 38px;
+    background-position: center;
+  }
+  & .icon1 {
+    background-image: url('/Online-zoo/assets/icons/banana-bamboo_icon.svg');
+  }
+  & .icon2 {
+    background-image: url('/Online-zoo/assets/icons/meet-fish_icon.svg');
+  }
+}
+
+.wraper {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  & .btn_choose {
+
+    height: 54px;
+    width: 298px;
+    border-radius: 25px;
+    justify-content: center;
+
+    margin-top: 80px;
+    margin-bottom: 100px;
+  }
+}
+@media (max-width:1439px) {
+  .btn_choose{
+    margin-top: 80px;
+    margin-bottom: 140px;
+  }
+}

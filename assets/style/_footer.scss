@@ -1,0 +1,213 @@
+
+.footer {
+  background-color: #000000;
+  padding: 40px 0px 50px;
+}
+
+.footer_container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 85px 1fr 140px;
+  grid-row-gap: 36px;
+}
+//
+.footer_logo{
+  grid-row: 1;
+  grid-column: 1 / 2;
+}
+.footer_submit{
+  grid-row: 1;
+  grid-column: 3 / 5;
+  justify-self: end;
+}
+.footer_donate {
+  grid-row: 2;
+  justify-self: start;
+  align-self: center;
+}
+.footer_social{
+  grid-row: 3;
+  justify-self: start;
+  align-self: end;
+}
+.footer_nav{
+  grid-row: 3;
+  grid-column: 2 / 4;
+  justify-self: center;
+  align-self: end;
+}
+.footer_autor{
+  grid-row: 3;
+  grid-column: 4 / 5;
+  justify-self: end;
+  align-self: end;
+}
+
+//
+
+.footer_submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & .subscribe_input{
+    & h4 {
+      color: $color_secondory;
+    }
+    & .input {
+      display: flex;
+      align-items: center;
+      margin-top: 14px;
+    }
+    & input {
+      width: 228px;
+      height: 42px;
+      border: 1px solid #FE9013;
+      border-radius: 2px;
+      padding: 10px;
+      background-color: #000000;
+      color: #BDBDBD;
+      margin-right: 10px
+    }
+    & button {
+      width: 129px;
+      height: 42px;
+      border-radius: 5px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      background-color: #F1F3F2;
+      border: 1px solid #333B41;
+      &:hover {
+        color: $color_hover;
+        border: 1px solid $color_hover;
+      }
+      &:active {
+        color: $color_active;
+        border: 1px solid $color_active;
+        transition: 400ms;
+      }
+    }
+  }
+}
+
+.donate_button{
+  @include btn;
+  border-radius: 5px;
+  @include btnInt;
+}
+
+.social {
+  & ul {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+  }
+}
+
+.footer_nav{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  align-items: flex-end;
+  @include text;
+  color: white;
+  & nav {
+    & ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      & .open{
+        color: $color_hover;
+      }
+    }
+  }
+  & .author{
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 130%;
+    color: white;
+  }
+}
+
+.social_link{
+  display: flex;
+  align-items: center;
+  &:hover {
+    color: $color_hover;
+    & .social_cyrcle {
+      background-color: $color_hover;
+
+    }
+  }
+  &:active{
+    color: $color_active;
+    & .social_cyrcle {
+      background-color: $color_active;
+    }
+  }
+  & .social_cyrcle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 50%;
+    margin-right: 12px;
+    & svg {
+      fill: #FFFFFF;
+    }
+  }
+}
+
+@media (max-width:999px) {
+  .subscribe_input{
+    display: none;
+  }
+
+}
+
+@media (max-width:999px) {
+  .footer_container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: 36px;
+  }
+  .footer_logo{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+  .footer_submit{
+    display: none;
+  }
+  .footer_donate {
+    grid-row: 2;
+    justify-self: start;
+    align-self: start;
+  }
+  .footer_social{
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+    justify-self: end;
+    align-self: center;
+    width: 26px;
+    height: 164px;
+    & span {
+      display: none;
+    }
+  }
+  .footer_nav{
+    grid-row: 3;
+    grid-column: 1 / 3;
+    justify-self: start;
+    align-self: end;
+  }
+  .footer_autor{
+    grid-row: 3;
+    grid-column: 2 / 3;
+    justify-self: end;
+    align-self: end;
+  }
+}

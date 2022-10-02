@@ -1,42 +1,7 @@
-header {
-  background-color: black;
-}
-.header_container{
-  width: 1160px;
-  margin: 0 auto;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  color: white;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 140%;
-  align-items: center;
-}
+@import '_footer';
 
-.header_nav {
-  & ul {
-    display: flex;
-    align-items: center;
-    & li {
-      padding-right: 58px;
-      &:first-child {
-        padding-right: 63px;
-      }
-      &.logo {
-        @include logo;
-        margin-right: 63px;
-      }
-      & a {
-        &.open {
-          color: #FE9013;
-        }
-      }
 
-    }
-  } 
-} 
+
 .panda {
   background-image: url('/Online-zoo/assets/images/Giant\ Panda.png');
   background-size: cover;
@@ -50,7 +15,6 @@ header {
   padding-bottom: 180px;
 }
 .donate_container {
-  width: $Container;
   margin: 0 auto;
 }
 .donate_info_title {
@@ -76,7 +40,7 @@ header {
   backdrop-filter: blur(2px);
   border-radius: 20px;
   margin-top: 60px;
-  padding: 40px 92px 62px;
+  padding: 40px 5vw 62px;
 }
 
 .donate_feed_title {
@@ -89,6 +53,7 @@ header {
   line-height: 120%;
   color: #333B41;
   margin-top: 20px;
+  text-align: center;
 }
 
 
@@ -134,12 +99,11 @@ header {
 
 
 .donate_pagination{
-  width: 976px;
-  margin: 10px auto;
+  margin: 10px 0;
 }
 .line_container{
   z-index: -1;
-  width: 976px;
+  width: 60vw;
   height: 27px;
   position: absolute;
   background-color: #404950;
@@ -171,6 +135,7 @@ header {
   display: none;
 }
 .dots_container{
+  width: 60vw;
   padding: 0 30px;
   display: flex;
   justify-content: space-between;
@@ -220,7 +185,7 @@ header {
 .input_money{
   width: 400px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -317,4 +282,18 @@ header {
   border-radius: 25px;
   margin-top: 30px;
   @include btnInt;
+}
+
+@media (max-width:1439px) {
+  .line_container{
+    width: 84vw;
+  }
+  .dots_container{
+    width: 84vw;
+  }
+  .dots_label{
+    &:nth-child(-1n+3) {
+      display: none;
+    }
+  }
 }

@@ -67,10 +67,18 @@ input::-webkit-inner-spin-button {
 * {
   font-family: 'Roboto', sans-serif; }
 
-h1 {
+.watch {
   font-weight: 700;
-  font-size: 114px;
-  line-height: 80%; }
+  font-size: 107px;
+  line-height: 75%; }
+
+@media (max-width: 1399px) {
+  .watch {
+    font-size: 85px; } }
+
+@media (max-width: 999px) {
+  .watch {
+    font-size: 54px; } }
 
 h2 {
   font-weight: 400;
@@ -101,6 +109,17 @@ a:active {
   color: green;
   transition: 400ms; }
 
+.container {
+  max-width: 72.5vw; }
+
+@media (max-width: 1439px) {
+  .container {
+    max-width: 94vw; } }
+
+@media (max-width: 999px) {
+  .container {
+    max-width: 94vw; } }
+
 .logocontainer {
   color: white;
   width: 82px;
@@ -109,7 +128,8 @@ a:active {
   justify-content: center;
   align-items: center;
   border: 1px solid white;
-  border-radius: 3px; }
+  border-radius: 3px;
+  padding: 5px; }
   .logocontainer:hover {
     border: 1px solid #E47209; }
   .logocontainer a:link {
@@ -123,31 +143,76 @@ a:active {
   .logocontainer a .logo {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 400;
-    font-size: 19px;
-    line-height: 120%;
     text-align: center; }
     .logocontainer a .logo div {
       position: relative; }
       .logocontainer a .logo div::before {
         content: '';
         position: absolute;
-        width: 10px;
-        height: 20px;
+        width: 21px;
+        height: 21px;
         background: url("/Online-zoo/assets/icons/bamboo.svg") no-repeat;
-        left: 6px;
-        top: -3px;
+        left: 3px;
+        top: -5px;
         overflow: visible; }
 
+@media (max-width: 999px) {
+  .logocontainer {
+    transform: scale(90%);
+    border: none; } }
+
+.logocontainer_footer {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 120%;
+  color: white;
+  width: 82px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 5px; }
+  .logocontainer_footer:hover {
+    border: 1px solid #E47209; }
+  .logocontainer_footer a:link {
+    color: white; }
+  .logocontainer_footer a:visited {
+    color: white; }
+  .logocontainer_footer a:hover {
+    color: white; }
+  .logocontainer_footer a:active {
+    color: white; }
+  .logocontainer_footer a .logo {
+    font-family: 'Roboto';
+    font-style: normal;
+    text-align: center; }
+    .logocontainer_footer a .logo div {
+      position: relative; }
+      .logocontainer_footer a .logo div::before {
+        content: '';
+        position: absolute;
+        width: 21px;
+        height: 21px;
+        background: url("/Online-zoo/assets/icons/bamboo.svg") no-repeat;
+        left: 3px;
+        top: -4px;
+        overflow: visible; }
+
+@media (max-width: 999px) {
+  .logocontainer_footer {
+    transform: scale(90%); } }
+
 header {
-  background-color: black; }
+  background-color: black;
+  z-index: 1;
+  position: relative; }
 
 .header_container {
-  width: 1160px;
   margin: 0 auto;
   height: 80px;
   display: flex;
-  justify-content: space-between;
   color: white;
   font-style: normal;
   font-weight: 500;
@@ -155,375 +220,554 @@ header {
   line-height: 140%;
   align-items: center; }
 
-.header_nav ul {
+@media (max-width: 999px) {
+  .header_container {
+    height: 40px; } }
+
+.logo_head {
+  margin-right: 63px; }
+
+.header_nav {
+  width: 100%;
   display: flex;
-  align-items: center; }
-  .header_nav ul li {
-    padding-right: 58px; }
-    .header_nav ul li:first-child {
-      padding-right: 63px; }
-    .header_nav ul li.logo {
-      width: 82px;
-      height: 52px;
-      font-weight: 400;
-      font-size: 19px;
-      line-height: 120%;
-      border: 1px solid white;
-      border-radius: 2px;
-      color: white;
-      text-align: center;
-      background-image: url(/assets/icons/logo.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 80%;
-      margin-right: 63px; }
-    .header_nav ul li.open {
-      color: #FE9013; }
+  justify-content: space-between; }
+  .header_nav ul {
+    display: flex;
+    align-items: center; }
+    .header_nav ul li {
+      padding-right: 58px; }
+      .header_nav ul li.open {
+        color: #FE9013; }
+
+.header_autor {
+  justify-self: end;
+  width: 120px; }
+
+@media (max-width: 999px) {
+  .header_nav {
+    display: none; } }
 
 .watch {
   background-image: url("/Online-zoo/assets/images/Giant Panda.png");
-  background-size: cover;
-  background-position: 0 -50px;
+  background-position: -50px -120px;
+  background-size: 110%;
   background-repeat: no-repeat;
-  height: 700px; }
+  margin: 0 auto; }
 
 .watch_content {
   position: relative;
-  width: 1160px;
   margin: 0 auto;
   display: flex;
   flex-flow: column;
   align-items: flex-end;
   text-transform: uppercase; }
-  .watch_content .title {
-    font-weight: 700;
-    font-size: 106px;
-    line-height: 75%;
-    padding: 0px;
-    z-index: 1;
-    margin-top: 86px;
-    width: 500px;
-    color: white;
-    text-align: center; }
-    .watch_content .title span {
-      color: #FFEE2E; }
-  .watch_content .circle {
-    z-index: -0;
-    position: absolute;
-    width: 465px;
-    height: 465px;
-    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-    border-radius: 50%;
-    margin-top: 12px;
-    transform: translate(-110px, 0); }
-  .watch_content button {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 140%;
-    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-    text-transform: uppercase;
-    color: white;
-    height: 54px;
-    width: 298px;
-    border-radius: 25px;
-    margin-top: 60px; }
-    .watch_content button:hover {
-      background: #E47209; }
-    .watch_content button:active {
-      background: green;
-      transition: 400ms; }
+
+.watch_text {
+  padding: 0px;
+  z-index: 1;
+  margin-top: 86px;
+  width: 500px;
+  color: white;
+  text-align: center; }
+  .watch_text span {
+    color: #FFEE2E; }
+
+.watch_circle {
+  z-index: 0;
+  position: absolute;
+  width: 465px;
+  height: 465px;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  border-radius: 50%;
+  margin-top: 12px;
+  transform: translate(-110px, 0); }
+
+.watch_btn {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  height: 54px;
+  width: 298px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  margin-top: 60px;
+  margin-bottom: 100px; }
+  .watch_btn:hover {
+    background: #E47209; }
+  .watch_btn:active {
+    background: green;
+    transition: 400ms; }
+
+@media (max-width: 1439px) {
+  .watch {
+    background-size: cover;
+    background-position: center; }
+  .watch_content .watch_text {
+    margin-right: 85px;
+    margin-top: 43px; }
+  .watch_content .watch_circle {
+    width: 367px;
+    height: 367px;
+    transform: translate(-150px, -25px); }
+  .watch_content .watch_btn {
+    margin-top: 40px;
+    margin-bottom: 47px; } }
+
+@media (max-width: 999px) {
+  .watch {
+    font-size: 54px; }
+    .watch .watch_content .watch_text {
+      margin-right: 0px;
+      margin-top: 43px;
+      width: 250px;
+      margin-bottom: 86px; }
+    .watch .watch_content .watch_circle {
+      width: 237.6px;
+      height: 237.6px;
+      transform: translate(-50px, 0px); }
+    .watch .watch_content .watch_btn {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      position: absolute;
+      left: 4vw; } }
 
 .info {
   background-image: url("/Online-zoo/assets/images/flower_foto1.png");
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: 102% center;
+  background-size: 25vh;
   overflow: visible;
   color: #333B41; }
 
-.infoContainer {
-  width: 1160px;
+@media (max-width: 1439px) {
+  .info {
+    background: none; } }
+
+.info_Container {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  height: 600px;
-  padding-top: 140px; }
+  align-items: center;
+  padding-bottom: 160px;
+  padding-top: 120px; }
 
 .info_foto {
-  flex: 0 1 52.5%;
+  flex: 0 1 52%;
+  height: 408px;
   background-image: url("/Online-zoo/assets/images/bamboo-cap.png");
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+.info_text_wraper {
+  flex: 0 1 47%;
+  padding-left: 87px; }
 
 .info_text {
-  padding-left: 87px;
-  flex: 0 1 47.5%; }
-  .info_text .body_text {
-    margin-top: 20px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 140%; }
-  .info_text h4 {
-    margin-top: 54px; }
-  .info_text :last-child {
-    margin-top: 34px; }
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%; }
+
+.info_subtitle {
+  margin-top: 54px; }
+
+.info_small_text {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%; }
+
+@media (max-width: 1439px) {
+  .info_Container {
+    padding-top: 100px;
+    padding-bottom: 140px; }
+  .info_foto {
+    flex: 0 1 45%; } }
+
+@media (max-width: 1439px) {
+  .info_text_wraper {
+    flex: 0 1 50%;
+    padding-left: 0px;
+    padding-right: 100px; } }
+
+@media (max-width: 1180px) {
+  .info_text_wraper {
+    flex: 0 1 50%;
+    padding-left: 0px;
+    padding-right: 0px; } }
+
+@media (max-width: 999px) {
+  .info {
+    background-image: url("/Online-zoo/assets/images/flower_foto1.png");
+    background-repeat: no-repeat;
+    background-position: 104% center;
+    background-size: 18vh; }
+  .info_Container {
+    padding-bottom: 80px;
+    padding-top: 60px; }
+  .info_subtitle {
+    margin-top: 30px; }
+  .info_foto {
+    display: none; }
+  .info_text_wraper {
+    flex: 0 1 80%; }
+  .info_text {
+    margin-top: 20px; } }
 
 .animals {
-  background: url("/Online-zoo/assets/images/strelitzia 1.png") right bottom no-repeat, url("/Online-zoo/assets/images/palm_foto.png") left bottom no-repeat;
-  margin-top: 106px; }
+  background: url("/Online-zoo/assets/images/strelitzia 1.png") right bottom no-repeat, url("/Online-zoo/assets/images/palm_foto.png") left bottom no-repeat; }
+
+@media (max-width: 1439px) {
+  .animals {
+    background-size: 30vh; } }
 
 .animals_container {
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
-  align-items: center; }
-  .animals_container button {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 140%;
-    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-    text-transform: uppercase;
-    color: white;
-    height: 54px;
-    width: 298px;
-    width: 62px;
-    height: 62px;
-    background-color: orange;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .animals_container button:hover {
-      background: #E47209; }
-    .animals_container button:active {
-      background: green;
-      transition: 400ms; }
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; }
 
-.animals_slider {
-  margin: 0 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-column-gap: 30px;
-  grid-row-gap: 20px; }
+.animals_slider_row1 {
+  max-width: 1180px;
+  overflow: hidden;
+  display: flex;
+  padding-top: 10px; }
 
-.animals_slider {
-  width: 1160px; }
+.animals_slider_row1::-webkit-scrollbar {
+  display: none; }
 
 .animals_card {
-  height: 426px;
-  border: 1px solid #E47209;
-  border-radius: 5px;
-  overflow: hidden; }
-  .animals_card .foto {
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 366px; }
-    .animals_card .foto::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      opacity: 0; }
+  flex: 1 0 auto;
+  border: 1px solid orange;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 15px; }
   .animals_card:hover {
+    overflow: visible;
+    border: none;
     transition: all 0.4s ease;
-    transform: scale(1.1);
-    border: none; }
-    .animals_card:hover .foto::before {
-      opacity: 1; }
-    .animals_card:hover .animals_text_conteiner {
+    transform: scale(1.05);
+    border-radius: 10px; }
+    .animals_card:hover .animals_card_foto {
+      overflow: visible;
+      border-radius: 10px; }
+      .animals_card:hover .animals_card_foto::before {
+        overflow: visible;
+        border-radius: 10px;
+        opacity: 1; }
+    .animals_card:hover .animals_card_text {
       transition: all 0.4s ease;
       transform: translateY(-60px);
       color: white; }
 
-.animals_foto1 {
-  background-image: url("/Online-zoo/assets/images/Rectangle 1.png"); }
+.animals_card_foto {
+  background: url("/Online-zoo/assets/images/Rectangle 1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 366px;
+  height: 366px;
+  position: relative;
+  border-radius: 10px; }
+  .animals_card_foto::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    border-radius: 10px; }
 
-.animals_foto2 {
-  background-image: url("/Online-zoo/assets/images/Rectangle 2.png"); }
-
-.animals_foto3 {
-  background-image: url("/Online-zoo/assets/images/Rectangle 3.png"); }
-
-.animals_foto4 {
-  background-image: url("/Online-zoo/assets/images/Rectangle 4.png"); }
-
-.animals_foto5 {
-  background-image: url("/Online-zoo/assets/images/Rectangle 5.png"); }
-
-.animals_foto6 {
-  background-image: url("/Online-zoo/assets/images/Rectangle 6.png"); }
-
-.animals_text_conteiner {
-  padding: 8px 12px 13px 16px;
+.animals_card_text {
+  padding: 8px 12px 14px 16px;
   display: flex;
   justify-content: space-between; }
-  .animals_text_conteiner .animals_text .animals_name {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 140%;
-    text-transform: uppercase; }
-  .animals_text_conteiner .animals_text .animals_location {
-    font-weight: 400;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 120%; }
-  .animals_text_conteiner .icon {
-    background-repeat: no-repeat;
-    width: 48px;
-    height: 38px;
-    background-position: center; }
-  .animals_text_conteiner .icon1 {
-    background-image: url("/Online-zoo/assets/icons/banana-bamboo_icon.svg"); }
-  .animals_text_conteiner .icon2 {
-    background-image: url("/Online-zoo/assets/icons/meet-fish_icon.svg"); }
 
-.wraper {
-  position: relative;
-  width: 1160px;
-  margin: 0 auto;
+.animals_card_name {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%; }
+
+.animals_card_location {
+  font-weight: 400;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%; }
+
+.animals_card_icon {
+  width: 40px;
+  height: 40px;
+  background: url("/Online-zoo/assets/icons/banana-bamboo_icon.svg") no-repeat; }
+
+.animals_btns {
+  position: absolute;
+  top: 38%;
+  max-width: 1300px;
+  width: 100%;
   display: flex;
+  justify-content: space-between; }
+
+.animals_slider_btn {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  height: 54px;
+  width: 298px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
   justify-content: center; }
-  .wraper .btn_choose {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 140%;
-    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-    text-transform: uppercase;
-    color: white;
-    height: 54px;
-    width: 298px;
-    height: 54px;
-    width: 298px;
-    border-radius: 25px;
+  .animals_slider_btn:hover {
+    background: #E47209; }
+  .animals_slider_btn:active {
+    background: green;
+    transition: 400ms; }
+
+.row2 {
+  margin-top: 20px; }
+
+@media (max-width: 1439px) {
+  .animals_btns {
+    position: static;
     justify-content: center;
+    padding: 15px 0;
+    max-width: 80vw; }
+  .animals_card_foto {
+    width: 294px;
+    height: 294px; }
+  .row2 {
+    margin-top: 0px; }
+  .animals_slider_btn {
+    margin: 0 85px; }
+  .animals_container {
+    position: relative; }
+  .animals_slider_row1 {
+    max-width: 970px; } }
+
+@media (max-width: 999px) {
+  .animals {
+    background-size: 18vh; }
+  .animals_btns {
+    justify-content: center;
+    padding: 15px 0;
+    max-width: 80vw;
+    margin-left: 10px; }
+  .animals_slider_btn {
+    margin: 0 15px; }
+  .animals_slider_row1 {
+    max-width: 640px; } }
+
+.btn_choose {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  height: 54px;
+  width: 298px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  height: 54px;
+  width: 298px;
+  border-radius: 25px;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 100px; }
+  .btn_choose:hover {
+    background: #E47209; }
+  .btn_choose:active {
+    background: green;
+    transition: 400ms; }
+
+@media (max-width: 1439px) {
+  .btn_choose {
     margin-top: 80px;
-    margin-bottom: 100px; }
-    .wraper .btn_choose:hover {
-      background: #E47209; }
-    .wraper .btn_choose:active {
-      background: green;
-      transition: 400ms; }
+    margin-bottom: 140px; } }
 
 .feed {
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
   padding-top: 70px;
   padding-bottom: 100px; }
 
+@media (max-width: 1439px) {
+  .feed {
+    padding-bottom: 50px;
+    padding-top: 30px; } }
+
 .feedContent {
   margin: 0 auto;
-  width: 1160px;
-  height: 835px;
   background: rgba(253, 253, 255, 0.52);
   border-radius: 20px;
   padding-left: 99px;
   padding-top: 41px;
   padding-right: 58px;
+  padding: 41px 58px 58px 99px;
   color: #333B41; }
-  .feedContent h2 {
-    color: #FE9013;
-    text-align: center; }
-  .feedContent h4 {
-    margin-top: 30px; }
-  .feedContent .feed_text {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 130%;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 140%;
-    margin-top: 40px; }
-  .feedContent .feed_small_text {
-    font-weight: 400;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 120%;
-    margin-top: 10px; }
-    .feedContent .feed_small_text a {
-      text-decoration: underline;
-      text-decoration-color: #FE9013;
-      color: #333B41; }
-  .feedContent h3 {
-    margin-top: 60px;
-    text-align: center; }
-  .feedContent .feed_how {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center; }
-  .feedContent .card {
-    width: 168px;
-    margin-right: 30px; }
-    .feedContent .card:last-child {
-      margin-right: 0px; }
-    .feedContent .card .text {
-      margin-top: 30px;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 140%; }
-    .feedContent .card .icon1 {
-      background-image: url("/Online-zoo/assets/icons/pay.svg"); }
-    .feedContent .card .icon2 {
-      background-image: url("/Online-zoo/assets/icons/zoo.svg"); }
-    .feedContent .card .icon3 {
-      background-image: url("/Online-zoo/assets/icons/monkey.svg"); }
-    .feedContent .card .icon {
-      position: relative;
-      width: 168px;
-      height: 168px;
-      background-repeat: no-repeat;
-      background-color: white;
-      background-position: center;
-      border-radius: 5px;
-      border: 1px solid #FE9013; }
-  .feedContent .strela {
-    margin-right: 30px;
-    padding-top: 54px; }
-  .feedContent .feed_button {
-    margin-top: 60px;
-    display: flex;
-    justify-content: center; }
-  .feedContent button {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 140%;
+
+.feed_title {
+  color: #FE9013;
+  text-align: center; }
+
+.feed_paragrah {
+  margin-top: 30px; }
+
+.feed_text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  margin-top: 40px; }
+
+.feed_small_text {
+  font-weight: 400;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 120%;
+  margin-top: 10px; }
+  .feed_small_text a {
+    text-decoration: underline;
+    text-decoration-color: #FE9013;
+    color: #333B41; }
+
+.feed_title_img {
+  margin-top: 60px;
+  text-align: center; }
+
+.feed_how {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center; }
+
+.strela {
+  margin-right: 30px;
+  padding-top: 54px; }
+
+.feed_button {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center; }
+  .feed_button button {
     background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-    text-transform: uppercase;
-    color: white;
     height: 54px;
     width: 298px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 25px; }
-    .feedContent button:hover {
+    .feed_button button:hover {
       background: #E47209; }
-    .feedContent button:active {
+    .feed_button button:active {
       background: green;
       transition: 400ms; }
+
+.feed_card {
+  width: 168px;
+  margin-right: 30px; }
+  .feed_card:last-child {
+    margin-right: 0px; }
+  .feed_card .text {
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%; }
+  .feed_card .icon1 {
+    background-image: url("/Online-zoo/assets/icons/pay.svg"); }
+  .feed_card .icon2 {
+    background-image: url("/Online-zoo/assets/icons/zoo.svg"); }
+  .feed_card .icon3 {
+    background-image: url("/Online-zoo/assets/icons/monkey.svg"); }
+  .feed_card .icon {
+    position: relative;
+    width: 168px;
+    height: 168px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center;
+    border-radius: 5px;
+    border: 1px solid #FE9013; }
+
+@media (max-width: 1440px) {
+  .feedContent {
+    padding: 30px 48px 50px; } }
+
+@media (max-width: 999px) {
+  .feed {
+    padding: 20px 0; }
+  .feedContent {
+    padding: 10px 20px 60px;
+    max-width: 100vw; }
+  .strela {
+    display: none; }
+  .feed_card {
+    margin-right: 42px; }
+  .feed_paragrah {
+    margin-top: 20px; }
+  .feed_text {
+    margin-top: 20px; }
+  .feed_small_text {
+    margin-top: 10px; }
+  .feed_title_img {
+    margin-top: 30px; }
+  .feed_how {
+    margin-top: 20px; }
+  .feed_button {
+    margin-top: 40px; } }
 
 .reviews {
   background-image: url("/Online-zoo/assets/images/leav_foto.png");
   background-repeat: no-repeat;
   background-position: right bottom;
   overflow: visible;
-  margin-top: 140px;
-  padding-bottom: 180px; }
+  z-index: -2; }
 
 .reviews_container {
-  width: 1160px;
   margin: 0 auto;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-top: 140px; }
 
-.reviews_text {
+.reviews_title {
   text-align: center; }
 
 .reviews_sliader {
+  padding-top: 30px;
   height: 450;
   margin: 0 auto;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  margin-top: 47px;
   overflow-x: auto; }
   .reviews_sliader::-webkit-scrollbar {
     height: 8px;
@@ -539,9 +783,9 @@ header {
 
 .reviews_card {
   flex: 0 0 auto;
-  width: 268px;
+  width: 266px;
   height: 391px;
-  margin: 10px;
+  margin: 10px 24px 20px 5px;
   padding: 16px;
   position: relative;
   background: #F1F3F2;
@@ -572,9 +816,6 @@ header {
   .reviews_card_title .icon4 {
     background-image: url("/Online-zoo/assets/images/Ellipse 4.png"); }
 
-.reviews_card_title {
-  display: flex; }
-
 .reviews_card_name {
   margin-left: 10px;
   font-weight: 400;
@@ -590,16 +831,20 @@ header {
   color: #767474; }
 
 .reviews_button {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  height: 54px;
+  width: 298px;
+  text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
-  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-  text-transform: uppercase;
   color: white;
-  height: 54px;
-  width: 298px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px;
   margin-top: 31px;
+  margin-bottom: 200px;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -609,25 +854,95 @@ header {
     background: green;
     transition: 400ms; }
 
-footer {
+@media (max-width: 1440px) {
+  .reviews_container {
+    padding-top: 100px; }
+  .reviews_button {
+    margin-top: 52px;
+    margin-bottom: 140px; }
+  .reviews_card {
+    margin: 10px 20px 20px 5px;
+    width: 293px;
+    height: 391px; } }
+
+@media (max-width: 999px) {
+  .reviews {
+    background-size: 10vh; }
+  .reviews_container {
+    padding-top: 60px; }
+  .reviews_sliader {
+    display: block;
+    overflow: hidden;
+    height: 390px; }
+  .reviews_card {
+    flex: 0 0 auto;
+    width: 99%;
+    height: 108px;
+    margin: 3px 2px 15px 4px;
+    padding: 13px 15px 1px 15px;
+    position: relative;
+    background: #F1F3F2;
+    border-radius: 20px; }
+  .reviews_card_wraper {
+    height: 100%;
+    overflow: hidden; }
+  .reviews_button {
+    right: 50%;
+    margin: 40px auto 80px; } }
+
+.footer {
   background-color: #000000;
-  padding-top: 40px; }
+  padding: 40px 0px 50px; }
 
 .footer_container {
-  width: 1160px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 85px 1fr 140px;
+  grid-row-gap: 36px; }
 
-.subscribe {
+.footer_logo {
+  grid-row: 1;
+  grid-column: 1 / 2; }
+
+.footer_submit {
+  grid-row: 1;
+  grid-column: 3 / 5;
+  justify-self: end; }
+
+.footer_donate {
+  grid-row: 2;
+  justify-self: start;
+  align-self: center; }
+
+.footer_social {
+  grid-row: 3;
+  justify-self: start;
+  align-self: end; }
+
+.footer_nav {
+  grid-row: 3;
+  grid-column: 2 / 4;
+  justify-self: center;
+  align-self: end; }
+
+.footer_autor {
+  grid-row: 3;
+  grid-column: 4 / 5;
+  justify-self: end;
+  align-self: end; }
+
+.footer_submit {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  .subscribe .subscribe_input h4 {
+  .footer_submit .subscribe_input h4 {
     color: white; }
-  .subscribe .subscribe_input .input {
+  .footer_submit .subscribe_input .input {
     display: flex;
     align-items: center;
     margin-top: 14px; }
-  .subscribe .subscribe_input input {
+  .footer_submit .subscribe_input input {
     width: 228px;
     height: 42px;
     border: 1px solid #FE9013;
@@ -636,7 +951,7 @@ footer {
     background-color: #000000;
     color: #BDBDBD;
     margin-right: 10px; }
-  .subscribe .subscribe_input button {
+  .footer_submit .subscribe_input button {
     width: 129px;
     height: 42px;
     border-radius: 5px;
@@ -645,24 +960,26 @@ footer {
     line-height: 140%;
     background-color: #F1F3F2;
     border: 1px solid #333B41; }
-    .subscribe .subscribe_input button:hover {
+    .footer_submit .subscribe_input button:hover {
       color: #E47209;
       border: 1px solid #E47209; }
-    .subscribe .subscribe_input button:active {
+    .footer_submit .subscribe_input button:active {
       color: green;
       border: 1px solid green;
       transition: 400ms; }
 
 .donate_button {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  height: 54px;
+  width: 298px;
+  text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
-  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-  text-transform: uppercase;
   color: white;
-  height: 54px;
-  width: 298px;
-  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 5px; }
   .donate_button:hover {
     background: #E47209; }
@@ -670,22 +987,20 @@ footer {
     background: green;
     transition: 400ms; }
 
+.social ul {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 10px; }
+
 .footer_nav {
-  position: relative;
   display: flex;
   justify-content: space-between;
   color: white;
   align-items: flex-end;
-  margin-top: 44px;
-  padding-bottom: 50px;
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
   color: white; }
-  .footer_nav .social ul {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-row-gap: 10px; }
   .footer_nav nav ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr; }
@@ -720,46 +1035,230 @@ footer {
     .social_link .social_cyrcle svg {
       fill: #FFFFFF; }
 
-header {
-  background-color: black; }
+@media (max-width: 999px) {
+  .subscribe_input {
+    display: none; } }
 
-.header_container {
-  width: 1160px;
+@media (max-width: 999px) {
+  .footer_container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: 36px; }
+  .footer_logo {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2; }
+  .footer_submit {
+    display: none; }
+  .footer_donate {
+    grid-row: 2;
+    justify-self: start;
+    align-self: start; }
+  .footer_social {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+    justify-self: end;
+    align-self: center;
+    width: 26px;
+    height: 164px; }
+    .footer_social span {
+      display: none; }
+  .footer_nav {
+    grid-row: 3;
+    grid-column: 1 / 3;
+    justify-self: start;
+    align-self: end; }
+  .footer_autor {
+    grid-row: 3;
+    grid-column: 2 / 3;
+    justify-self: end;
+    align-self: end; } }
+
+.footer {
+  background-color: #000000;
+  padding: 40px 0px 50px; }
+
+.footer_container {
   margin: 0 auto;
-  height: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 85px 1fr 140px;
+  grid-row-gap: 36px; }
+
+.footer_logo {
+  grid-row: 1;
+  grid-column: 1 / 2; }
+
+.footer_submit {
+  grid-row: 1;
+  grid-column: 3 / 5;
+  justify-self: end; }
+
+.footer_donate {
+  grid-row: 2;
+  justify-self: start;
+  align-self: center; }
+
+.footer_social {
+  grid-row: 3;
+  justify-self: start;
+  align-self: end; }
+
+.footer_nav {
+  grid-row: 3;
+  grid-column: 2 / 4;
+  justify-self: center;
+  align-self: end; }
+
+.footer_autor {
+  grid-row: 3;
+  grid-column: 4 / 5;
+  justify-self: end;
+  align-self: end; }
+
+.footer_submit {
   display: flex;
   justify-content: space-between;
-  color: white;
-  font-style: normal;
+  align-items: center; }
+  .footer_submit .subscribe_input h4 {
+    color: white; }
+  .footer_submit .subscribe_input .input {
+    display: flex;
+    align-items: center;
+    margin-top: 14px; }
+  .footer_submit .subscribe_input input {
+    width: 228px;
+    height: 42px;
+    border: 1px solid #FE9013;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: #000000;
+    color: #BDBDBD;
+    margin-right: 10px; }
+  .footer_submit .subscribe_input button {
+    width: 129px;
+    height: 42px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    background-color: #F1F3F2;
+    border: 1px solid #333B41; }
+    .footer_submit .subscribe_input button:hover {
+      color: #E47209;
+      border: 1px solid #E47209; }
+    .footer_submit .subscribe_input button:active {
+      color: green;
+      border: 1px solid green;
+      transition: 400ms; }
+
+.donate_button {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  height: 54px;
+  width: 298px;
+  text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
-  align-items: center; }
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px; }
+  .donate_button:hover {
+    background: #E47209; }
+  .donate_button:active {
+    background: green;
+    transition: 400ms; }
 
-.header_nav ul {
+.social ul {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 10px; }
+
+.footer_nav {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  align-items: flex-end;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: white; }
+  .footer_nav nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
+    .footer_nav nav ul .open {
+      color: #E47209; }
+  .footer_nav .author {
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 130%;
+    color: white; }
+
+.social_link {
   display: flex;
   align-items: center; }
-  .header_nav ul li {
-    padding-right: 58px; }
-    .header_nav ul li:first-child {
-      padding-right: 63px; }
-    .header_nav ul li.logo {
-      width: 82px;
-      height: 52px;
-      font-weight: 400;
-      font-size: 19px;
-      line-height: 120%;
-      border: 1px solid white;
-      border-radius: 2px;
-      color: white;
-      text-align: center;
-      background-image: url(/assets/icons/logo.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 80%;
-      margin-right: 63px; }
-    .header_nav ul li a.open {
-      color: #FE9013; }
+  .social_link:hover {
+    color: #E47209; }
+    .social_link:hover .social_cyrcle {
+      background-color: #E47209; }
+  .social_link:active {
+    color: green; }
+    .social_link:active .social_cyrcle {
+      background-color: green; }
+  .social_link .social_cyrcle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    background: rgba(196, 196, 196, 0.5);
+    border-radius: 50%;
+    margin-right: 12px; }
+    .social_link .social_cyrcle svg {
+      fill: #FFFFFF; }
+
+@media (max-width: 999px) {
+  .subscribe_input {
+    display: none; } }
+
+@media (max-width: 999px) {
+  .footer_container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: 36px; }
+  .footer_logo {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2; }
+  .footer_submit {
+    display: none; }
+  .footer_donate {
+    grid-row: 2;
+    justify-self: start;
+    align-self: start; }
+  .footer_social {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+    justify-self: end;
+    align-self: center;
+    width: 26px;
+    height: 164px; }
+    .footer_social span {
+      display: none; }
+  .footer_nav {
+    grid-row: 3;
+    grid-column: 1 / 3;
+    justify-self: start;
+    align-self: end; }
+  .footer_autor {
+    grid-row: 3;
+    grid-column: 2 / 3;
+    justify-self: end;
+    align-self: end; } }
 
 .panda {
   background-image: url("/Online-zoo/assets/images/Giant Panda.png");
@@ -774,7 +1273,6 @@ header {
   padding-bottom: 180px; }
 
 .donate_container {
-  width: 1160px;
   margin: 0 auto; }
 
 .donate_info_title {
@@ -800,7 +1298,7 @@ header {
   backdrop-filter: blur(2px);
   border-radius: 20px;
   margin-top: 60px;
-  padding: 40px 92px 62px; }
+  padding: 40px 5vw 62px; }
 
 .donate_feed_title {
   color: #FE9013;
@@ -811,7 +1309,8 @@ header {
   font-size: 24px;
   line-height: 120%;
   color: #333B41;
-  margin-top: 20px; }
+  margin-top: 20px;
+  text-align: center; }
 
 .donate_info_infographics {
   padding-top: 80px;
@@ -853,12 +1352,11 @@ header {
   background-position: center; }
 
 .donate_pagination {
-  width: 976px;
-  margin: 10px auto; }
+  margin: 10px 0; }
 
 .line_container {
   z-index: -1;
-  width: 976px;
+  width: 60vw;
   height: 27px;
   position: absolute;
   background-color: #404950;
@@ -886,6 +1384,7 @@ header {
   display: none; }
 
 .dots_container {
+  width: 60vw;
   padding: 0 30px;
   display: flex;
   justify-content: space-between;
@@ -931,7 +1430,7 @@ header {
 .input_money {
   width: 400px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 90px;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -1020,14 +1519,17 @@ header {
   color: black; }
 
 .btn_feed {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  height: 54px;
+  width: 298px;
+  text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
   line-height: 140%;
-  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-  text-transform: uppercase;
   color: white;
-  height: 54px;
-  width: 298px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 25px;
   margin-top: 30px; }
   .btn_feed:hover {
@@ -1035,3 +1537,11 @@ header {
   .btn_feed:active {
     background: green;
     transition: 400ms; }
+
+@media (max-width: 1439px) {
+  .line_container {
+    width: 84vw; }
+  .dots_container {
+    width: 84vw; }
+  .dots_label:nth-child(-1n+3) {
+    display: none; } }
