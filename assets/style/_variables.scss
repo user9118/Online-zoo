@@ -14,6 +14,49 @@ $secondory_gradient: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%
 * {
   font-family: 'Roboto', sans-serif;
 }
+
+.title{
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 120%;
+}
+
+.smalltitle{
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 130%;
+}
+.sub_title{
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+}
+.butn_text{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #FFFFFF;
+}
+
+@media (max-width:639px) {
+  .title{
+    font-size: 24px;
+  }
+  .smalltitle{
+    font-size: 24px;
+  }
+  .sub_title{
+    font-size: 24px;
+  }
+  .butn_text{
+
+  }
+}
+
+
+
+
+
 .watch {
   font-weight: 700;
   font-size: 107px;
@@ -29,11 +72,7 @@ $secondory_gradient: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%
     font-size: 54px;
   }
 }
-h2{
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 120%;
-}
+
 h3{
   font-weight: 400;
   font-size: 36px;
@@ -174,7 +213,7 @@ a{
 
 @media (max-width:999px) {
   .logocontainer{
-    transform: scale(90%);
+    transform: scale(85%);
     border: none;
   }
 }
