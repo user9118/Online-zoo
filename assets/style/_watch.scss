@@ -92,3 +92,29 @@
     }
   }
 }
+@media (max-width:639px) {
+  .watch{
+    font-size: 28px;
+    .watch_content{
+      & .watch_text {
+        margin-right: 0px;
+        margin-top: 41px;
+        width: 130px;
+        margin-bottom: 86px;
+      }
+      & .watch_circle {
+        width: 119.09px;
+        height: 119.09px;
+        transform: translate(-30px, 10px)
+      }
+      & .watch_btn {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, 18vh);
+      }
+    }
+  }
+}

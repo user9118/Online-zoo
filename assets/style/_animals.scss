@@ -1,6 +1,6 @@
 .animals {
-  background: url('/Online-zoo/assets/images/strelitzia\ 1.png') right bottom no-repeat, 
-              url('/Online-zoo/assets/images/palm_foto.png') left bottom no-repeat;
+  background: url('/Online-zoo/assets/images/strelitzia\ 1.png') right bottom / 35vh no-repeat, 
+              url('/Online-zoo/assets/images/palm_foto.png') left bottom / 25vh no-repeat;
 }
 @media (max-width:1439px) {
   .animals{
@@ -9,15 +9,14 @@
 }
 .animals_container{
   position: relative;
-  max-width: 1300px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
 }
 .animals_slider_row1{
-  max-width: 1180px;
+  margin-left: 0 -20px;
+  max-width: 1190px;
   overflow: hidden;
   display: flex;
   padding-top: 10px;
@@ -37,14 +36,13 @@
     border: none;
     transition: all 0.4s ease;
     transform: scale(1.05);
-    border-radius: 10px;
     & .animals_card_foto {
       overflow: visible;
       border-radius: 10px;
       &::before {
         overflow: visible;
-        border-radius: 10px;
         opacity: 1;
+        border-radius: 10px;
       }
     }
     & .animals_card_text{
@@ -56,14 +54,9 @@
 }
 
 .animals_card_foto{
-  background: url('/Online-zoo/assets/images/Rectangle\ 1.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  position: relative;
   width: 366px;
   height: 366px;
-  position: relative;
-  border-radius: 10px;
   &::before {
     content: '';
     position: absolute;
@@ -73,8 +66,31 @@
     height: 100%;
     background: rgba($color: #000000, $alpha: 0.5);
     opacity: 0;
-    border-radius: 10px;
   }
+}
+.animals_foto1{
+  background: url('/Online-zoo/assets/images/Rectangle\ 1.png') center / cover no-repeat;
+}
+.animals_foto2{
+  background: url('/Online-zoo/assets/images/Rectangle\ 2.png') center / cover no-repeat;
+}
+.animals_foto3{
+  background: url('/Online-zoo/assets/images/Rectangle\ 3.png') center / cover no-repeat;
+}
+.animals_foto4{
+  background: url('/Online-zoo/assets/images/Rectangle\ 4.png') center / cover no-repeat;
+}
+.animals_foto5{
+  background: url('/Online-zoo/assets/images/Rectangle\ 5.png') center / cover no-repeat;
+}
+.animals_foto6{
+  background: url('/Online-zoo/assets/images/Rectangle\ 6.png') center / cover no-repeat;
+}
+.animals_foto7{
+  background: url('/Online-zoo/assets/images/Rectangle\ 7.png') center / cover no-repeat;
+}
+.animals_foto8{
+  background: url('/Online-zoo/assets/images/Rectangle\ 8.png') center / cover no-repeat;
 }
 
 .animals_card_text{
@@ -90,14 +106,21 @@
  @include text_small;
 }
 .animals_card_icon{
-  width: 40px;
+  width: 50px;
   height: 40px;
+}
+
+.icon_vegan{
   background: url('/Online-zoo/assets/icons/banana-bamboo_icon.svg') no-repeat;
 }
+.icon_meet{
+  background: url('/Online-zoo/assets/icons/meet-fish_icon.svg') no-repeat;
+}
+
 .animals_btns{
   position: absolute;
-  top: 38%;
-  max-width: 1300px;
+  top: 37%;
+  max-width: 1340px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -118,13 +141,16 @@
 }
 
 @media (max-width:1439px) {
+  .animals {
+    background: url('/Online-zoo/assets/images/strelitzia\ 1.png') right bottom / 40vh no-repeat, 
+                url('/Online-zoo/assets/images/palm_foto.png') left bottom / 24vh no-repeat;
+  }
   .animals_btns{
     position: static;
     justify-content: center;
     padding: 15px 0;
     max-width: 80vw;
   }
-
   .animals_card_foto{
     width: 294px;
     height: 294px;
@@ -144,8 +170,9 @@
 }
 
 @media (max-width:999px) {
-  .animals{
-    background-size: 18vh;
+  .animals {
+    background: url('/Online-zoo/assets/images/strelitzia\ 1.png') right bottom / 26vh no-repeat, 
+                url('/Online-zoo/assets/images/palm_foto.png') left bottom / 20vh no-repeat;
   }
   .animals_btns{
     justify-content: center;
@@ -182,5 +209,36 @@
   .btn_choose{
     margin-top: 80px;
     margin-bottom: 140px;
+  }
+}
+@media (max-width:639px) {
+  .animals{
+    background: url('/Online-zoo/assets/images/strelitzia\ 1.png') right bottom / 10vh no-repeat, 
+    url('/Online-zoo/assets/images/palm_foto.png') left bottom / 6vh no-repeat;
+  }
+  .animals_btns{
+    display: none;
+  }
+  .animals_slider_row1{
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .row2 {
+    display: none;
+  }
+  .animals_card{
+    width: 285px;
+    height: 337px;
+    margin: 0 0 20px 0;
+    & .animals_card_foto{
+      background-size: cover;
+      width: 100%;
+      height: 285.24px;
+    }
+  }
+  .btn_choose{
+    margin: 0px auto 60px;
   }
 }

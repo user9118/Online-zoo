@@ -220,7 +220,7 @@ a{
           width: 21px;
           height: 21px;
           background: url('/Online-zoo/assets/icons/bamboo.svg') no-repeat;
-          left: 3px;
+          left: 6px;
           top: -4px;
           overflow: visible;
         }
@@ -232,6 +232,18 @@ a{
 @media (max-width:999px) {
   .logocontainer_footer{
     transform: scale(90%);
+  }
+}
+@media (max-width:639px) {
+  .logocontainer_footer{
+    border: none;
+    transform: scale(100%);
+    & .logo {
+      display: flex;
+      & div {
+        padding-left: 10px;
+      }
+    }
   }
 }
 
