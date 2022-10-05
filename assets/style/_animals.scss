@@ -19,7 +19,7 @@
   max-width: 1190px;
   overflow: hidden;
   display: flex;
-  padding-top: 10px;
+  margin-top: 20px;
 }
 .animals_slider_row1::-webkit-scrollbar{
   display: none;
@@ -55,7 +55,7 @@
 
 .animals_card_foto{
   position: relative;
-  width: 366px;
+  width: 364px;
   height: 366px;
   &::before {
     content: '';
@@ -94,7 +94,7 @@
 }
 
 .animals_card_text{
-  padding: 8px 12px 14px 16px;
+  padding: 8px 12px 11px 16px;
   display: flex;
   justify-content: space-between;
 }
@@ -142,14 +142,17 @@
 
 @media (max-width:1439px) {
   .animals {
-    background: url('/Online-zoo/assets/images/strelitzia\ 1.png') right bottom / 40vh no-repeat, 
-                url('/Online-zoo/assets/images/palm_foto.png') left bottom / 24vh no-repeat;
+    background: url('/Online-zoo/assets/images/strelitzia\ 1.png') right bottom / 29vh  no-repeat, 
+                url('/Online-zoo/assets/images/palm_foto.png') 0% bottom / 16vh  no-repeat;
   }
   .animals_btns{
     position: static;
     justify-content: center;
     padding: 15px 0;
     max-width: 80vw;
+  }
+  .animals_card{
+    margin: 0 14px;
   }
   .animals_card_foto{
     width: 294px;
@@ -191,6 +194,11 @@
   .animals_slider_row1{
     max-width: 640px;
   }
+  .animals_card_foto{
+    width: 286px;
+    height: 267px;
+  }
+
 }
 
 .btn_choose {
@@ -211,6 +219,12 @@
     margin-bottom: 140px;
   }
 }
+@media (max-width:999px) {
+  .btn_choose{
+    margin-top: 65px;
+    margin-bottom: 100px;
+  }
+}
 @media (max-width:639px) {
   .animals{
     background: url('/Online-zoo/assets/images/strelitzia\ 1.png') right bottom / 10vh no-repeat, 
@@ -224,6 +238,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-top: 14px;
   }
   .row2 {
     display: none;
@@ -231,7 +246,7 @@
   .animals_card{
     width: 285px;
     height: 337px;
-    margin: 0 0 20px 0;
+    margin: 0 0 16px 0;
     & .animals_card_foto{
       background-size: cover;
       width: 100%;

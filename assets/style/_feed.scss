@@ -17,7 +17,7 @@
   padding-left: 99px;
   padding-top: 41px;
   padding-right: 58px;
-  padding: 41px 58px 58px 99px;
+  padding: 41px 58px 58px 58px;
   color: #333B41;
 }
 
@@ -26,9 +26,12 @@
   text-align: center
 }
 .feed_paragrah {
+  font-weight: 500;
+  padding-left: 40px;
   margin-top: 30px
 }
 .feed_text {
+  padding-left: 40px;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
@@ -36,6 +39,7 @@
   margin-top: 40px;
 }
 .feed_small_text {
+  padding-left: 40px;
   @include text_small;
   margin-top: 10px;
   & a {
@@ -100,23 +104,38 @@
   }
 }
 
-@media (max-width:1440px) {
+@media (max-width:1439px) {
   .feedContent{
-    padding: 30px 48px 50px;
+    padding: 30px 44px 50px;
   }
   .feed_title_img{
-    margin-top: 40px;
+    margin-top: 44px;
+    padding: 0;
   }
   .feed_paragrah{
+    padding: 0;
     margin-top: 20px;
   }
   .feed_text{
     margin-top: 20px;
+    padding: 0;
+  }
+  .feed_small_text{
+    padding: 0;
+  }
+  .feed_button{
+    margin-top: 71px;
   }
 }
 @media (max-width:999px) {
   .feed{
     padding: 20px 0;
+  }
+  .feed_title{
+    font-size: 42px;
+  }
+  .feed_paragrah{
+    font-size: 22px;
   }
   .feedContent{
     padding: 10px 20px 60px;
@@ -141,7 +160,7 @@
     }
   }
   .feed_card{
-    margin-right: 42px;
+    margin-right: 18px;
   }
   .feed_paragrah{
     margin-top: 20px;
@@ -188,7 +207,7 @@
     align-items: center;
   }
   .feed_card{
-    margin: 0px 0px 30px;
+    margin: 0px 0px 34px;
     & .text{
       margin-top: 10px;
     }
@@ -205,7 +224,7 @@
     }
   }
   .feed_button{
-    margin: 0;
+    margin-top: 4px
   }
   .feedContent {
     padding: 20px 10px 40px;

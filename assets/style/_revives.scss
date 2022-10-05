@@ -10,7 +10,7 @@
 .reviews_container{
   margin: 0 auto;
   overflow: hidden;
-  padding-top: 140px;
+  padding-top: 145px;
 }
 
 .reviews_title{
@@ -18,7 +18,7 @@
 }
 
 .reviews_sliader {
-  padding-top: 30px;
+  padding-top: 37px;
   height: 450;
   margin: 0 auto;
   display: flex;
@@ -89,10 +89,13 @@
   margin-left: 10px;
   @include text;
 }
+.reviews_card_location{
+  font-size: 14px;
+}
 
 .reviews_card_text{
   @include text_small;
-  margin-top: 11px;
+  margin-top: 3px;
   color: #767474;
 }
 
@@ -100,26 +103,30 @@
   @include  btn;
   border-radius: 5px;
   margin-top: 31px;
-  margin-bottom: 200px;
+  margin-bottom: 182px;
   display: flex;
   justify-content: center;
   align-items: center;
   @include btnInt;
 }
 
-@media (max-width:1440px) {
+@media (max-width:1439px) {
   .reviews{
     background-size: 15vh;
   }
   .reviews_container{
     padding-top: 100px;
   }
+  .reviews_sliader{
+    padding-top: 21px;
+    
+  }
   .reviews_button{
     margin-top: 52px;
     margin-bottom: 140px;
   }
   .reviews_card{
-    margin: 10px 20px 20px 5px;
+    margin: 10px 26px 20px 4px;
     width: 293px;
     height: 391px;
   }
@@ -138,13 +145,14 @@
     display: block;
     overflow: hidden;
     height: 390px;
+    padding-top: 29px;
   }
   .reviews_card {
     flex: 0 0 auto;
     width: 99%;
     height: 108px;
     margin: 3px 2px 15px 4px;
-    padding: 13px 15px 1px 15px;
+    padding: 14px 15px 10px 9px;
     position: relative;
     background: #F1F3F2;
     border-radius: 20px;
@@ -168,6 +176,7 @@
   .reviews_button{
     right: 50%;
     margin: 40px auto 80px;
+    width: 241px;
   }
 }
 
@@ -189,6 +198,6 @@
   }
   .reviews_button{
     right: 50%;
-    margin: 30px auto 60px;
+    margin: 15px  auto 60px;
   }
 }

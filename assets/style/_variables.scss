@@ -28,7 +28,7 @@ $secondory_gradient: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%
 }
 .sub_title{
   font-weight: 400;
-  font-size: 24px;
+  font-size: 34px;
   line-height: 120%;
 }
 .butn_text{
@@ -165,8 +165,9 @@ a{
 
 
 .logocontainer{
+  margin: 0 auto;
   color: white;
-  width: 82px;
+  width: 92px;
   height: 52px;
   display: flex;
   justify-content: center;
@@ -223,7 +224,7 @@ a{
   font-size: 19px;
   line-height: 120%;
   color: white;
-  width: 82px;
+  width: 83px;
   height: 52px;
   display: flex;
   justify-content: center;

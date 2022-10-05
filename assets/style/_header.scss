@@ -41,10 +41,18 @@ header {
     }
   } 
 } 
+@media (max-width:1439px) {
+  .header_nav{
+    & ul {
+      & li {
+        padding-right: 49px;
+      }
+    }
+  }
+}
 
 .header_autor{
   justify-self: end;
-  width: 120px;
 }
 
 .header_burger{
@@ -52,6 +60,12 @@ header {
 }
 
 @media (max-width:999px) {
+  .logo_head{
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    transform: scale(77%);
+  }
   .header_nav{
     display: none;
   }

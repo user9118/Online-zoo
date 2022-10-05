@@ -23,6 +23,7 @@
 }
 .footer_donate {
   grid-row: 2;
+  grid-column: 1 / 5;
   justify-self: start;
   align-self: center;
 }
@@ -101,7 +102,11 @@
   & ul {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-row-gap: 10px;
+    grid-row-gap: 9px;
+    & li {
+      align-self: center;
+      font-size: 16px;
+    }
   }
 }
 
@@ -116,16 +121,23 @@
     & ul {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+      & li {
+        padding: 0px 16px 0px 0px;
+      }
       & .open{
         color: $color_hover;
       }
     }
   }
-  & .author{
-    font-weight: 100;
-    font-size: 16px;
-    line-height: 130%;
-    color: white;
+}
+
+.author{
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 130%;
+  color: white;
+  & div {
+    padding-top: 10px;
   }
 }
 
@@ -136,7 +148,6 @@
     color: $color_hover;
     & .social_cyrcle {
       background-color: $color_hover;
-
     }
   }
   &:active{
@@ -160,20 +171,43 @@
   }
 }
 
+@media (max-width:1439px) {
+  .subscribe_input{
+    margin-right: 35px;
+  }
+  .footer_container{
+    grid-template-columns: 1.4fr 1fr 1fr 1.5fr;
+  }
+  .footer_nav{
+    & nav {
+      & ul {
+        & li {
+          padding: 0px 10px 0px 0px;
+        }
+        & .open{
+          color: $color_hover;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width:999px) {
   .subscribe_input{
     display: none;
   }
-
 }
 
 @media (max-width:999px) {
+  .footer{
+    padding: 10px 0 0;
+  }
   .footer_container {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-row-gap: 36px;
+    grid-template-rows: 63px  1fr 61px;
+    grid-row-gap: 24px;
   }
   .footer_logo{
     grid-row: 1 / 2;
@@ -204,6 +238,9 @@
     & nav{
       & ul {
         grid-template-columns: 1fr 1fr 1fr 1.1fr;
+        & li {
+          padding: 0px 5px  0px 0px;
+        }
       }
     }
   }
@@ -213,6 +250,12 @@
     justify-self: end;
     align-self: end;
   }
+  & .social_link{
+    & .social_cyrcle{
+      margin: 0 0 11px  0px;
+    }
+  }
+
 }
 @media (max-width:639px) {
   .footer{
@@ -223,7 +266,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 23px 26px 56px 50px 1fr;
-    grid-row-gap: 30px;
+    grid-row-gap: 29px;
   }
   .footer_logo{
     grid-row: 1 / 2;
@@ -246,8 +289,10 @@
     grid-column: 1;
     justify-self: center;
     align-self: center;
+    width: 65%;
     & ul {
       display: flex;
+      justify-content: space-between;
     }
     & span {
       display: none;
@@ -260,7 +305,7 @@
     align-self: center;
     & nav{
       & ul {
-        grid-template-columns: 1fr 1fr 1fr 1.1fr;
+        grid-template-columns: 1fr 1fr 1fr 1.2fr;
       }
     }
   }
@@ -269,5 +314,8 @@
     grid-column: 1;
     justify-self: end;
     align-self: center;
+    & div {
+      padding: 0px;
+    }
   }
 }

@@ -30,7 +30,7 @@
 }
 .donate_title {
   color: #FE9013;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 .donate_wraper {
   background: rgba(255, 255, 255, 0.52);
@@ -54,7 +54,7 @@
 }
 
 .donate_info_infographics{
-  padding-top: 80px;
+  padding-top: 54px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -94,7 +94,7 @@
 
 .input_money{
   margin: 0 auto;
-  margin-top: 90px;
+  margin-top: 98px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -198,7 +198,10 @@
     padding-bottom: 30px;
   }
   .donate_info_text{
-    margin-top: 30px;
+    margin-top: 40px;
+  }
+  .donate_title {
+    margin-top: 46px;
   }
   .donate_wraper{
     margin-top: 40px;
@@ -210,10 +213,10 @@
     margin-top: 10px;
   }
   .donate_info_infographics{
-    padding-top: 60px;
+    padding-top: 34px;
   }
   .input_money{
-    margin-top: 92px;
+    margin-top: 97px;
   }
 }
 @media (max-width:999px) {
@@ -221,7 +224,7 @@
     height: 335px;
    }
    .donate{
-    padding: 20px 0 46px 0;
+    padding: 32px 0 46px 0;
    }
    .donate_info_title{
     font-size: 24px;
@@ -235,7 +238,7 @@
    }
    .donate_wraper{
     margin-top: 30px;
-    padding: 20px 0;
+    padding: 20px 0 32px;
    }
    .donate_feed_title{
     margin-top: 0;
@@ -245,26 +248,30 @@
     margin-top: 10px;
    }
     .donate_info_infographics{
-      padding-top: 20px;
+      padding-top: 106px;
+    }
+    .infographics_contaner{
+      margin-right: 0px
     }
     .infographics_x{
-      margin-right: 35px;
+      margin-right: 66px;
     }
     .amount{
-      margin-top: 4px;
+      margin-top: 35px;
       font-size: 16px;
     }
     .input_money{
-      margin-top: 85px;
+      margin-top: 98px;
     }
     .pay_container{
+      height: 42px;
       width: 180px;
     }
     .donate_format_pay{
-      margin-top: 25px;
+      margin-top: 30px;
     }
     .btn_feed{
-      margin-top: 25px;
+      margin-top: 29px;
     }
 }
 @media (max-width:639px) {
@@ -272,7 +279,7 @@
   height: 187px;
  }
  .donate{
-  padding: 30px 0 0 0;
+  padding: 30px 0 20px 0;
  }
  .donate_info_title{
   font-size: 24px;
@@ -282,7 +289,7 @@
   margin-top: 20px;
  }
  .donate_title{
-  margin-top: 30px;
+  margin-top: 25px;
  }
  .donate_wraper{
   margin-top: 30px;
@@ -317,14 +324,16 @@
     margin-right: 35px;
   }
   .amount{
-    margin-top: 4px;
+    padding: 0;
+    margin-top: -2px;
     font-size: 16px;
   }
   .input_money{
-    margin-top: 55px;
+    margin-top: 49px;
   }
   .pay_container{
     width: 180px;
+    height: 42px;
   }
   .donate_format_pay{
     margin-top: 25px;
@@ -430,6 +439,9 @@
 }
 
 @media (max-width:1439px) {
+  .donate_dots{
+    margin-top: 5px;
+  }
   .dots_container{
     width: 90vw;
   }
@@ -441,6 +453,9 @@
       display: none;
       width: 9vw;
     }
+  }
+  .sum{
+    transform: translate(25px, 31px);
   }
 }
 @media (max-width:999px) {
@@ -455,9 +470,13 @@
       display: none;
     }
   }
+  .donate_dots{
+    margin-top: 2px;
+  }
 }
 @media (max-width:639px) {
   .donate_dots{
+    margin-top: 8px;
     height: 14px;
   }
   .line{
@@ -477,7 +496,6 @@
   .dot{
     width: 5px;
     height: 5px;
-
     &::before{
       width: 20px;
       height: 20px;
@@ -489,6 +507,8 @@
     }
   }
   .sum{
+    transform: translate(-1px, 13px);
+    margin: 0;
     font-size: 13px;
     & svg {
       width: 5px;

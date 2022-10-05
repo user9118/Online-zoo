@@ -19,12 +19,12 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 160px;
-  padding-top: 120px;
+  padding-top: 139px;
 }
 
 .info_foto {
-  flex: 0 1 52%;
-  height: 408px;
+  flex: 0 1 52.5%;
+  height: 402px;
   background-image: url('/Online-zoo/assets/images/bamboo-cap.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -33,42 +33,40 @@
 
 .info_text_wraper {
   flex: 0 1 47%;
-  padding-left: 87px;
+  padding-left: 80px;
+  height: 402px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-info_subtitle
+
 .info_text {
-  margin-top: 20px;
-  @include text;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
 }
 .info_subtitle {
-  margin-top: 54px;
+  margin-top: 24px;
 }
 .info_small_text {
-  margin-top: 20px;
   @include text;
 }
 
 @media (max-width:1439px) {
   .info_Container{
-    padding-top: 100px;
-    padding-bottom: 140px;
+    padding-top: 109px;
+    padding-bottom: 132px;
+    max-width: 96vw;
   }
   .info_foto{
-    flex: 0 1 45%;
+    flex: 0 1 48.5%;
+    height: 409px;
   }
 }
 @media (max-width:1439px) {
   .info_text_wraper{
-    flex: 0 1 50%;
+    flex: 0 1 48%;
     padding-left: 0px;
-    padding-right: 100px;
-  }
-}
-@media (max-width:1180px) {
-  .info_text_wraper{
-    flex: 0 1 50%;
-    padding-left: 0px;
-    padding-right: 0px;
   }
 }
 @media (max-width:999px) {
@@ -79,11 +77,15 @@ info_subtitle
     background-size: 18vh;
   }
   .info_Container{
-    padding-bottom: 80px;
-    padding-top: 60px;
+    box-sizing: content-box;
+    height: 400px;
+    padding: 0;
+    margin: 0;
+    margin: 63px 20px 28px;
+    max-width: 93vw;
   }
   .info_subtitle{
-    margin-top: 30px;
+    margin: 0px;
   }
   .info_foto{
     display: none;
@@ -92,7 +94,7 @@ info_subtitle
     flex: 0 1 80%;
   }
   .info_text{
-    margin-top: 20px;
+
   }
 }
 
@@ -100,12 +102,13 @@ info_subtitle
   .info{
     background-image: url('/Online-zoo/assets/images/flower_foto1.png');
     background-repeat: no-repeat;
-    background-position: 113% 18%;
-    background-size: 20%;
+    background-position: 115% 0%;
+    background-size: 21%;
   }
   .info_Container{
     padding-bottom: 40px;
-    padding-top: 104px;
+    padding-top: 30px;
+    margin: 0px 11px 0;
   }
   .info_subtitle{
     margin-top: 30px;

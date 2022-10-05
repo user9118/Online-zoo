@@ -40,10 +40,10 @@
 
 .watch_btn {
   @include btn;
-  border-radius: 25px;
   margin-top: 60px;
   @include btnInt;
-  margin-bottom: 100px;
+  margin: 60px auto 100px;
+  border-radius: 25px;
 }
 
 @media (max-width:1439px) {
@@ -53,7 +53,7 @@
   }
   .watch_content{
     & .watch_text {
-      margin-right: 85px;
+      margin-right: 5px;
       margin-top: 43px;
     }
     & .watch_circle {
@@ -74,7 +74,7 @@
     .watch_content{
       & .watch_text {
         margin-right: 0px;
-        margin-top: 43px;
+        margin-top: 50px;
         width: 250px;
         margin-bottom: 86px;
       }
@@ -84,10 +84,10 @@
         transform: translate(-50px, 0px)
       }
       & .watch_btn {
-        margin-top: 0px;
+        margin-top: -7px;
         margin-bottom: 0px;
         position: absolute;
-        left: 4vw;
+        left: 0vw;
       }
     }
   }
@@ -113,7 +113,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, 18vh);
+        transform: translate(-50%, 11vh);
       }
     }
   }
