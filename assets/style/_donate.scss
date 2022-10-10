@@ -1,7 +1,5 @@
 @import '_footer';
 
-
-
 .panda {
   background-image: url('/Online-zoo/assets/images/Giant\ Panda.png');
   background-size: cover;
@@ -79,7 +77,7 @@
 }
 .infographics_x{
   margin-top: 40px;
-  background: url('/Online-zoo/assets/icons/x_icon.png') no-repeat;
+  background: url('/Online-zoo/assets/icons/x_icon2.png') no-repeat;
   background-position: center;
   width: 14px;
   height: 14px;
@@ -124,6 +122,9 @@
   line-height: 140%;
 }
 .pay_input{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
   padding-left: 10px;
   height: 54px;
   border: 0px;
@@ -342,7 +343,6 @@
     margin-top: 25px;
   }
 }
-
 
 .donate_dots{
   position: relative;

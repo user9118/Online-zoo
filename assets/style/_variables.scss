@@ -164,60 +164,6 @@ a{
 //logotip
 
 
-.logocontainer{
-  margin: 0 auto;
-  color: white;
-  width: 92px;
-  height: 52px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid white;
-  border-radius: 3px;
-  padding: 5px;
-  &:hover {
-    border: 1px solid $color_hover;
-  }
-  & a{
-    &:link {
-      color: white;
-    }
-    &:visited {
-      color: white;
-    }
-    &:hover {
-      color: white;
-    }
-    &:active {
-      color: white;
-    }
-    & .logo{
-      font-family: 'Roboto';
-      font-style: normal;
-      text-align: center;
-      & div {
-        position: relative;
-        &::before{
-          content: '';
-          position: absolute;
-          width: 21px;
-          height: 21px;
-          background: url('/Online-zoo/assets/icons/bamboo.svg') no-repeat;
-          left: 3px;
-          top: -5px;
-          overflow: visible;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width:999px) {
-  .logocontainer{
-    transform: scale(85%);
-    border: none;
-  }
-}
 
 .logocontainer_footer{
   font-weight: 400;

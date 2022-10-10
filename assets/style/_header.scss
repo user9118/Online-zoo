@@ -1,6 +1,6 @@
 header {
   background-color: black;
-  z-index: 1;
+  z-index: 2;
   position: relative;
 }
 
@@ -18,41 +18,110 @@ header {
 
 @media (max-width:999px) {
   .header_container{
-    height: 34px;
+    height: 40px;
   }
 }
 
 .logo_head{
   margin-right: 63px;
+  z-index: 5;
 }
 
 .header_nav {
+  z-index: 1;
   width: 100%;
   display: flex;
   justify-content: space-between;
   & ul {
+    z-index: 50;
     display: flex;
     align-items: center;
     & li {
-      padding-right: 58px;
-      &.open {
+      margin-right: 7vh;
+      & .open {
         color: #FE9013;
       }
     }
   } 
 } 
+
+
+.logocontainer{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  margin: 0 auto;
+  color: white;
+  width: 82px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 5px;
+  &:hover {
+    border: 1px solid $color_hover;
+  }
+  & a{
+    &:link {
+      color: white;
+    }
+    &:visited {
+      color: white;
+    }
+    &:hover {
+      color: white;
+    }
+    &:active {
+      color: white;
+    }
+    & .logo{
+      position: relative;
+      text-align: center;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 140%;
+      & svg {
+        position: absolute;
+        fill: white;
+        //&::before{
+        //  content: '';
+        //  position: absolute;
+        //  width: 21px;
+        //  height: 21px;
+        //  background: url('/Online-zoo/assets/icons/bamboo.svg') no-repeat;
+        left: 4px;
+        top: 18px;
+        //  overflow: visible;
+        //}
+      }
+    }
+  }
+}
+
+@media (max-width:999px) {
+  .logocontainer{
+    border: none;
+    z-index: 5;
+    color: #E47209;
+  }
+}
+
 @media (max-width:1439px) {
   .header_nav{
     & ul {
       & li {
-        padding-right: 49px;
       }
     }
   }
 }
 
 .header_autor{
-  justify-self: end;
+  padding: 0;
+  margin: auto 0;
 }
 
 .header_burger{
@@ -64,21 +133,30 @@ header {
     margin: 0;
     padding: 0;
     width: 50px;
-    transform: scale(77%);
   }
-  .header_nav{
+  .menu{
     display: none;
+  }
+  .header_autor{
+    margin: 0;
+  }
+  header {
+    position: fixed;
+    width: 100vw;
   }
   .header_container {
     justify-content: space-between;
   }
   .header_burger{
+    z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 18px;
     height: 10px;
-    position: relative;
+    position: absolute;
+    right: 4vw;
+    top: 10px;
     & span {
       content: '';
       background-color: $color_secondory;
@@ -101,5 +179,54 @@ header {
       border-radius: 2px;
     }
   }
-
+  .menu_burger{
+    & .header_burger{
+      & span {
+        display: none;
+      }
+      &::before{
+        background-color: $color_dominant;
+        transform: translateY(4px) rotate(45deg);
+      }
+      &::after{
+        background-color: $color_dominant;
+        transform: translateY(-4px) rotate(-45deg);
+      }
+    }
+    .header_nav{
+      color: $color_dominant;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      position: fixed;
+      padding-left: 3vw;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      opacity: 0.8;
+      z-index: 1;
+      & ul {
+        flex-direction: column;
+        align-items: flex-start;
+        & .menu{
+          display: block;
+        }
+        & li {
+          margin-bottom: 1vh;
+          & a {
+            color: $color_dominant;
+            & svg {
+              fill: black;
+            }
+          }
+        }
+        & .logocontainer{
+          align-items: flex-start;
+          margin-bottom: 2vh;
+        }
+      }
+    }
+  }
 }

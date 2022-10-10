@@ -144,48 +144,6 @@ a:active {
   .container {
     max-width: 94vw; } }
 
-.logocontainer {
-  margin: 0 auto;
-  color: white;
-  width: 92px;
-  height: 52px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid white;
-  border-radius: 3px;
-  padding: 5px; }
-  .logocontainer:hover {
-    border: 1px solid #E47209; }
-  .logocontainer a:link {
-    color: white; }
-  .logocontainer a:visited {
-    color: white; }
-  .logocontainer a:hover {
-    color: white; }
-  .logocontainer a:active {
-    color: white; }
-  .logocontainer a .logo {
-    font-family: 'Roboto';
-    font-style: normal;
-    text-align: center; }
-    .logocontainer a .logo div {
-      position: relative; }
-      .logocontainer a .logo div::before {
-        content: '';
-        position: absolute;
-        width: 21px;
-        height: 21px;
-        background: url("/Online-zoo/assets/icons/bamboo.svg") no-repeat;
-        left: 3px;
-        top: -5px;
-        overflow: visible; }
-
-@media (max-width: 999px) {
-  .logocontainer {
-    transform: scale(85%);
-    border: none; } }
-
 .logocontainer_footer {
   font-weight: 400;
   font-size: 19px;
@@ -240,7 +198,7 @@ a:active {
 
 header {
   background-color: black;
-  z-index: 1;
+  z-index: 2;
   position: relative; }
 
 .header_container {
@@ -256,29 +214,73 @@ header {
 
 @media (max-width: 999px) {
   .header_container {
-    height: 34px; } }
+    height: 40px; } }
 
 .logo_head {
-  margin-right: 63px; }
+  margin-right: 63px;
+  z-index: 5; }
 
 .header_nav {
+  z-index: 1;
   width: 100%;
   display: flex;
   justify-content: space-between; }
   .header_nav ul {
+    z-index: 50;
     display: flex;
     align-items: center; }
     .header_nav ul li {
-      padding-right: 58px; }
-      .header_nav ul li.open {
+      margin-right: 7vh; }
+      .header_nav ul li .open {
         color: #FE9013; }
 
-@media (max-width: 1439px) {
-  .header_nav ul li {
-    padding-right: 49px; } }
+.logocontainer {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  margin: 0 auto;
+  color: white;
+  width: 82px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 5px; }
+  .logocontainer:hover {
+    border: 1px solid #E47209; }
+  .logocontainer a:link {
+    color: white; }
+  .logocontainer a:visited {
+    color: white; }
+  .logocontainer a:hover {
+    color: white; }
+  .logocontainer a:active {
+    color: white; }
+  .logocontainer a .logo {
+    position: relative;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%; }
+    .logocontainer a .logo svg {
+      position: absolute;
+      fill: white;
+      left: 4px;
+      top: 18px; }
+
+@media (max-width: 999px) {
+  .logocontainer {
+    border: none;
+    z-index: 5;
+    color: #E47209; } }
 
 .header_autor {
-  justify-self: end; }
+  padding: 0;
+  margin: auto 0; }
 
 .header_burger {
   display: none; }
@@ -287,19 +289,26 @@ header {
   .logo_head {
     margin: 0;
     padding: 0;
-    width: 50px;
-    transform: scale(77%); }
-  .header_nav {
+    width: 50px; }
+  .menu {
     display: none; }
+  .header_autor {
+    margin: 0; }
+  header {
+    position: fixed;
+    width: 100vw; }
   .header_container {
     justify-content: space-between; }
   .header_burger {
+    z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 18px;
     height: 10px;
-    position: relative; }
+    position: absolute;
+    right: 4vw;
+    top: 10px; }
     .header_burger span {
       content: '';
       background-color: white;
@@ -317,7 +326,43 @@ header {
       background-color: white;
       width: 100%;
       height: 2px;
-      border-radius: 2px; } }
+      border-radius: 2px; }
+  .menu_burger .header_burger span {
+    display: none; }
+  .menu_burger .header_burger::before {
+    background-color: black;
+    transform: translateY(4px) rotate(45deg); }
+  .menu_burger .header_burger::after {
+    background-color: black;
+    transform: translateY(-4px) rotate(-45deg); }
+  .menu_burger .header_nav {
+    color: black;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+    padding-left: 3vw;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.8;
+    z-index: 1; }
+    .menu_burger .header_nav ul {
+      flex-direction: column;
+      align-items: flex-start; }
+      .menu_burger .header_nav ul .menu {
+        display: block; }
+      .menu_burger .header_nav ul li {
+        margin-bottom: 1vh; }
+        .menu_burger .header_nav ul li a {
+          color: black; }
+          .menu_burger .header_nav ul li a svg {
+            fill: black; }
+      .menu_burger .header_nav ul .logocontainer {
+        align-items: flex-start;
+        margin-bottom: 2vh; } }
 
 .watch {
   background-image: url("/Online-zoo/assets/images/Giant Panda.png");
@@ -426,7 +471,7 @@ header {
       position: absolute;
       left: 50%;
       top: 50%;
-      transform: translate(-50%, 11vh); } }
+      transform: translate(-50%, 14vh); } }
 
 .info {
   background-image: url("/Online-zoo/assets/images/flower_foto1.png");
@@ -519,7 +564,7 @@ header {
     background-size: 21%; }
   .info_Container {
     padding-bottom: 40px;
-    padding-top: 30px;
+    padding-top: 60px;
     margin: 0px 11px 0; }
   .info_subtitle {
     margin-top: 30px; }
@@ -538,41 +583,75 @@ header {
     margin-top: 10px; } }
 
 .animals {
-  background: url("/Online-zoo/assets/images/strelitzia 1.png") right bottom/35vh no-repeat, url("/Online-zoo/assets/images/palm_foto.png") left bottom/25vh no-repeat; }
+  z-index: 1;
+  background: url("/Online-zoo/assets/images/strelitzia 1.png") right bottom/35vh no-repeat, url("/Online-zoo/assets/images/palm_foto.png") left bottom/25vh no-repeat;
+  padding-bottom: 100px; }
 
 @media (max-width: 1439px) {
   .animals {
-    background-size: 30vh; } }
+    background-size: 30vh;
+    padding-bottom: 100px; } }
 
 .animals_container {
+  width: 100%;
+  max-width: 1152px;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden; }
+  margin: 0 auto; }
 
-.animals_slider_row1 {
-  margin-left: 0 -20px;
-  max-width: 1190px;
-  overflow: hidden;
-  display: flex;
-  margin-top: 20px; }
+@media (max-width: 1439px) {
+  .animals_container {
+    max-width: 942px; } }
 
-.animals_slider_row1::-webkit-scrollbar {
-  display: none; }
+@media (max-width: 999px) {
+  .animals_container {
+    max-width: 618px; } }
+
+.animals_corusel {
+  overflow: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth; }
+
+.animals_corusel::-webkit-scrollbar {
+  height: 0; }
+
+.animals_corusel_row {
+  overflow: visible;
+  padding: 10px 0;
+  display: grid;
+  grid-gap: 30px;
+  grid-auto-flow: column;
+  margin: auto;
+  box-sizing: border-box; }
+
+@media (max-width: 1439px) {
+  .animals_corusel_row {
+    grid-gap: 30px; } }
+
+@media (max-width: 999px) {
+  .animals_corusel_row {
+    grid-gap: 30px; } }
+
+@media (max-width: 639px) {
+  .animals_corusel_row {
+    display: block;
+    height: 1420px;
+    overflow: hidden; }
+  .animals_corusel2 {
+    display: none; } }
 
 .animals_card {
-  flex: 1 0 auto;
+  width: 364px;
+  height: 424px;
   border: 1px solid orange;
   border-radius: 10px;
-  overflow: hidden;
-  margin: 0 15px; }
+  overflow: hidden; }
   .animals_card:hover {
+    z-index: 100;
     overflow: visible;
     border: none;
-    transition: all 0.4s ease;
-    transform: scale(1.05); }
+    transition: all 0.4s ease; }
     .animals_card:hover .animals_card_foto {
+      transform: scale(1.05);
       overflow: visible;
       border-radius: 10px; }
       .animals_card:hover .animals_card_foto::before {
@@ -650,12 +729,13 @@ header {
   background: url("/Online-zoo/assets/icons/meet-fish_icon.svg") no-repeat; }
 
 .animals_btns {
-  position: absolute;
-  top: 37%;
-  max-width: 1340px;
-  width: 100%;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin: 0 -60px;
+  transform: translateY(-30px); }
+
+.animals_corusel2 {
+  margin-top: -60px; }
 
 .animals_slider_btn {
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
@@ -690,36 +770,33 @@ header {
   .animals_btns {
     position: static;
     justify-content: center;
-    padding: 15px 0;
-    max-width: 80vw; }
+    margin: 0;
+    transform: translateY(0px);
+    padding: 0;
+    max-width: 100%; }
   .animals_card {
-    margin: 0 14px; }
+    height: 352px;
+    width: 294px; }
   .animals_card_foto {
     width: 294px;
     height: 294px; }
-  .row2 {
-    margin-top: 0px; }
   .animals_slider_btn {
     margin: 0 85px; }
   .animals_container {
     position: relative; }
-  .animals_slider_row1 {
-    max-width: 970px; } }
+  .animals_corusel2 {
+    margin-top: 0px; } }
 
 @media (max-width: 999px) {
   .animals {
     background: url("/Online-zoo/assets/images/strelitzia 1.png") right bottom/26vh no-repeat, url("/Online-zoo/assets/images/palm_foto.png") left bottom/20vh no-repeat; }
-  .animals_btns {
-    justify-content: center;
-    padding: 15px 0;
-    max-width: 80vw;
-    margin-left: 10px; }
   .animals_slider_btn {
     margin: 0 15px; }
-  .animals_slider_row1 {
-    max-width: 640px; }
+  .animals_card {
+    width: 294px;
+    height: 332px; }
   .animals_card_foto {
-    width: 286px;
+    width: 292px;
     height: 267px; } }
 
 .btn_choose {
@@ -742,8 +819,8 @@ header {
   width: 298px;
   border-radius: 25px;
   justify-content: center;
-  margin-top: 80px;
-  margin-bottom: 100px; }
+  margin: 0 auto;
+  margin-top: 80px; }
   .btn_choose:hover {
     background: #E47209; }
   .btn_choose:active {
@@ -752,8 +829,7 @@ header {
 
 @media (max-width: 1439px) {
   .btn_choose {
-    margin-top: 80px;
-    margin-bottom: 140px; } }
+    margin-top: 80px; } }
 
 @media (max-width: 999px) {
   .btn_choose {
@@ -762,27 +838,19 @@ header {
 
 @media (max-width: 639px) {
   .animals {
-    background: url("/Online-zoo/assets/images/strelitzia 1.png") right bottom/10vh no-repeat, url("/Online-zoo/assets/images/palm_foto.png") left bottom/6vh no-repeat; }
+    background: url("/Online-zoo/assets/images/strelitzia 1.png") right bottom/16vh no-repeat, url("/Online-zoo/assets/images/palm_foto.png") left bottom/8vh no-repeat; }
   .animals_btns {
-    display: none; }
-  .animals_slider_row1 {
-    overflow: hidden;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-top: 14px; }
-  .row2 {
     display: none; }
   .animals_card {
     width: 285px;
     height: 337px;
-    margin: 0 0 16px 0; }
+    margin: 0 auto 16px; }
     .animals_card .animals_card_foto {
       background-size: cover;
       width: 100%;
       height: 285.24px; }
   .btn_choose {
-    margin: 0px auto 60px; } }
+    margin: 0px auto; } }
 
 .feed {
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
@@ -935,7 +1003,7 @@ header {
     width: 100px;
     height: 67px;
     background: url("/Online-zoo/assets/icons/arrow_green.png") left top no-repeat;
-    z-index: 10;
+    z-index: 1;
     transform: translate(-49px, -75px); }
   .feed_card {
     margin-right: 18px; }
@@ -994,12 +1062,20 @@ header {
   background-repeat: no-repeat;
   background-position: right bottom;
   overflow: visible;
-  z-index: -2; }
+  z-index: 10;
+  position: relative;
+  overflow: visible; }
 
 .reviews_container {
   margin: 0 auto;
   overflow: hidden;
-  padding-top: 145px; }
+  padding-top: 145px;
+  max-width: 1160px;
+  transition: all 1s ease; }
+
+@media (max-width: 1439px) {
+  .reviews_container {
+    max-width: 945px; } }
 
 .reviews_title {
   text-align: center; }
@@ -1011,18 +1087,10 @@ header {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  overflow-x: auto; }
+  overflow-x: auto;
+  transition: all 0.2s ease; }
   .reviews_sliader::-webkit-scrollbar {
-    height: 8px;
-    border-radius: 5px;
-    border: 1px solid #FE9013; }
-  .reviews_sliader::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: #FE9013; }
-  .reviews_sliader::-webkit-scrollbar-track {
-    background: black;
-    border: 4px solid transparent;
-    background-clip: content-box; }
+    display: none; }
 
 .reviews_card {
   flex: 0 0 auto;
@@ -1032,7 +1100,8 @@ header {
   padding: 16px;
   position: relative;
   background: #F1F3F2;
-  border-radius: 20px; }
+  border-radius: 20px;
+  transition: all 0.3s; }
   .reviews_card::before {
     content: "";
     position: absolute;
@@ -1076,6 +1145,32 @@ header {
   margin-top: 3px;
   color: #767474; }
 
+.revives_scroll {
+  transition: all 1s ease;
+  display: block;
+  -webkit-appearance: none;
+  background-color: #F1F3F2;
+  width: 600px;
+  height: 8px;
+  border-radius: 5px;
+  border: 1px solid #FEBDABBD;
+  margin: 0 auto;
+  outline: 0; }
+  .revives_scroll::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #FE9013;
+    width: 115px;
+    height: 6px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    padding: 0;
+    margin: 0; }
+
+@media (max-width: 999px) {
+  .revives_scroll {
+    display: none; } }
+
 .reviews_button {
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
   height: 54px;
@@ -1111,7 +1206,7 @@ header {
     margin-top: 52px;
     margin-bottom: 140px; }
   .reviews_card {
-    margin: 10px 26px 20px 4px;
+    margin: 10px 24px 20px 5px;
     width: 293px;
     height: 391px; } }
 
@@ -1131,11 +1226,10 @@ header {
     height: 108px;
     margin: 3px 2px 15px 4px;
     padding: 14px 15px 10px 9px;
-    position: relative;
     background: #F1F3F2;
     border-radius: 20px; }
   .reviews_card_wraper {
-    height: 100%;
+    max-height: 100%;
     overflow: hidden; }
   .reviews_button {
     right: 50%;
@@ -1157,6 +1251,39 @@ header {
   .reviews_button {
     right: 50%;
     margin: 15px  auto 60px; } }
+
+@media (max-width: 999px) {
+  .modal {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 267px;
+    height: 391px;
+    z-index: 50;
+    border: 2px solid salmon; }
+    .modal::before {
+      background: none; }
+  .overlay {
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0.8; }
+  .x {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(150px, -185px);
+    content: '';
+    width: 18px;
+    height: 18px;
+    background: url("/Online-zoo/assets/icons/x_icon.png") no-repeat;
+    z-index: -1;
+    transition: all 0.3s; } }
 
 .footer {
   background-color: #000000;
@@ -1749,7 +1876,7 @@ header {
 
 .infographics_x {
   margin-top: 40px;
-  background: url("/Online-zoo/assets/icons/x_icon.png") no-repeat;
+  background: url("/Online-zoo/assets/icons/x_icon2.png") no-repeat;
   background-position: center;
   width: 14px;
   height: 14px;
@@ -1792,6 +1919,9 @@ header {
   line-height: 140%; }
 
 .pay_input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
   padding-left: 10px;
   height: 54px;
   border: 0px;
